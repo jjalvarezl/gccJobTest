@@ -1,0 +1,476 @@
+[2018-03-16 17:41:46] CORE         INFO      	Create CoreBase as Service
+[2018-03-16 17:41:46] CORE         INFO      	Config file: C:\Program Files (x86)\Aranda\Aranda Agent 9\agent.config
+[2018-03-16 17:41:47] CORE         INFO      	Loading Agent9.3.2dat
+[2018-03-16 17:41:47] DataAccess   INFO      	Opening database C:\ProgramData\Aranda\Aranda AGENT 9\data\Agent9.3.2.dat result = 0 :not an error
+[2018-03-16 17:41:47] CORE         INFO      	Starting Aranda ACORE Agent
+[2018-03-16 17:41:47] CORE         INFO      	=====================================================================================
+[2018-03-16 17:41:47] CORE         INFO      	=                           ACORE Agent starting                                    =
+[2018-03-16 17:41:47] CORE         INFO      	=====================================================================================
+[2018-03-16 17:41:47] CORE         INFO      	
+========================================
+ Start section
+ INFO_PRODUCT 		 Aranda Agent 9.3.1803.101
+ MAX_LOG_FILE_SIZE 		 1000 [Kbytes]
+ MAX_LOG_FILES 			 10 
+ Win32 Enviroment Variables 
+AGENT9_SDK=Z:\tmp\AGENT\sdk\Win32\;ALLUSERSPROFILE=C:\ProgramData;APPDATA=C:\Windows\system32\config\systemprofile\AppData\Roaming;CommonProgramFiles=C:\Program Files (x86)\Common Files;CommonProgramFiles(x86)=C:\Program Files (x86)\Common Files;CommonProgramW6432=C:\Program Files\Common Files;COMPUTERNAME=BG-D-JRODRIGU01;ComSpec=C:\Windows\system32\cmd.exe;FSHARPINSTALLDIR=C:\Program Files (x86)\Microsoft SDKs\F#\4.1\Framework\v4.0\;LOCALAPPDATA=C:\Windows\system32\config\systemprofile\AppData\Local;NUMBER_OF_PROCESSORS=8;OS=Windows_NT;Path=C:\Perl\site\bin;C:\Perl\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Windows Kits\10\Windows Performance Toolkit\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\dotnet\;C:\Program Files\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\110\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files\Microsoft SQL Server\120\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\120\Tools\Binn\ManagementStudio\;C:\Program Files (x86)\Microsoft SQL Server\120\DTS\Binn\;C:\Program Files\Git\cmd;C:\Program Files\CMake\bin;;PATHEXT=.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;PROCESSOR_ARCHITECTURE=x86;PROCESSOR_ARCHITEW6432=AMD64;PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 60 Stepping 3, GenuineIntel;PROCESSOR_LEVEL=6;PROCESSOR_REVISION=3c03;ProgramData=C:\ProgramData;ProgramFiles=C:\Program Files (x86);ProgramFiles(x86)=C:\Program Files (x86);ProgramW6432=C:\Program Files;PROMPT=$P$G;PSModulePath=C:\Program Files\WindowsPowerShell\Modules;C:\Windows\system32\WindowsPowerShell\v1.0\Modules;C:\Program Files (x86)\Microsoft SQL Server\120\Tools\PowerShell\Modules\;PUBLIC=C:\Users\Public;SystemDrive=C:;SystemRoot=C:\Windows;TEMP=C:\Windows\TEMP;TMP=C:\Windows\TEMP;USERDOMAIN=INTERSEQ;USERNAME=BG-D-JRODRIGU01$;USERPROFILE=C:\Windows\system32\config\systemprofile;VBOX_MSI_INSTALL_PATH=C:\Program Files\Oracle\VirtualBox\;windir=C:\Windows;
+========================================
+ CONFIGURATION DUMP 
+ C:\Program Files (x86)\Aranda\Aranda Agent 9\agent.config : <Agent:Configuration xmlns:Agent="urn:arandasoft-com:agent"><Agent:profile id="0" /><Agent:communication port="9025" registerPeriod="5"><Agent:serverAddress><Agent:url>http://bg-d-admserver1/conserver</Agent:url></Agent:serverAddress></Agent:communication></Agent:Configuration>
+========================================
+[2018-03-16 17:41:47] CORE         INFO      	>>> Start	Aranda::CORE::CoreBase::CreateModuleDependecies
+[2018-03-16 17:41:47] CORE         INFO      	Create ActionSystem
+[2018-03-16 17:41:47] ActionSystem INFO      	>>Aranda::Common::ActionSystem::ActionSystem
+[2018-03-16 17:41:47] f:\builds\agent9\1\_work\7\s\base\common\actionsystem\private\worker\ThreadPool.hpp INFO      	>>Aranda::Common::ThreadPool<8>::ThreadPool
+[2018-03-16 17:41:47] f:\builds\agent9\1\_work\7\s\base\common\actionsystem\private\worker\ThreadPool.hpp INFO      	>>Aranda::Common::ThreadPool<8>::Task Thread fnc started
+[2018-03-16 17:41:47] f:\builds\agent9\1\_work\7\s\base\common\actionsystem\private\worker\ThreadPool.hpp INFO      	>>Aranda::Common::ThreadPool<8>::Task Thread fnc started
+[2018-03-16 17:41:47] f:\builds\agent9\1\_work\7\s\base\common\actionsystem\private\worker\ThreadPool.hpp INFO      	>>Aranda::Common::ThreadPool<8>::Task Thread fnc started
+[2018-03-16 17:41:47] f:\builds\agent9\1\_work\7\s\base\common\actionsystem\private\worker\ThreadPool.hpp INFO      	>>Aranda::Common::ThreadPool<8>::Task Thread fnc started
+[2018-03-16 17:41:47] f:\builds\agent9\1\_work\7\s\base\common\actionsystem\private\worker\ThreadPool.hpp INFO      	>>Aranda::Common::ThreadPool<8>::Task Thread fnc started
+[2018-03-16 17:41:47] f:\builds\agent9\1\_work\7\s\base\common\actionsystem\private\worker\ThreadPool.hpp INFO      	>>Aranda::Common::ThreadPool<8>::Task Thread fnc started
+[2018-03-16 17:41:47] f:\builds\agent9\1\_work\7\s\base\common\actionsystem\private\worker\ThreadPool.hpp INFO      	>>Aranda::Common::ThreadPool<8>::Task Thread fnc started
+[2018-03-16 17:41:47] ActionSystem INFO      	>>Aranda::Common::Worker::Worker
+[2018-03-16 17:41:47] f:\builds\agent9\1\_work\7\s\base\common\actionsystem\private\worker\ThreadPool.hpp INFO      	>>Aranda::Common::ThreadPool<8>::Task Thread fnc started
+[2018-03-16 17:41:47] ActionSystem INFO      	Creating SchedulerClock
+[2018-03-16 17:41:47] ActionSystem INFO      	Created SchedulerClock
+[2018-03-16 17:41:47] ActionSystem INFO      	SchedulerClock Arming Clock
+[2018-03-16 17:41:47] ActionSystem INFO      	SchedulerClock Clock armed
+[2018-03-16 17:41:47] ActionSystem INFO      	ActionHandler has been started
+[2018-03-16 17:41:47] ActionSystem INFO      	<<Aranda::Common::ActionSystem::ActionSystem
+[2018-03-16 17:41:47] CORE         INFO      	Starting IPCCore
+[2018-03-16 17:41:47] CORE         INFO      	Started IPCCore
+[2018-03-16 17:41:51] CORE         INFO      	Create Communication system
+[2018-03-16 17:41:51] CORE         INFO      	Create ModuleDependecies
+[2018-03-16 17:41:51] CORE         INFO      	<<< Finish	Aranda::CORE::CoreBase::CreateModuleDependecies
+[2018-03-16 17:41:51] CORE         INFO      	>>> Start	Aranda::CORE::CommunicationSystem::StartFileProvider
+[2018-03-16 17:41:51] CORE         INFO      	<<< Finish	Aranda::CORE::CommunicationSystem::StartFileProvider
+[2018-03-16 17:41:51] CORE         INFO      	>>> Start	Aranda::CORE::CoreService::CreateCoreModule
+[2018-03-16 17:41:51] CORE         INFO      	CreateCoreModule: Create CoreModule
+[2018-03-16 17:41:51] CORE         INFO      	RegisterOnNewIPCCallback registred
+[2018-03-16 17:41:51] CORE         INFO      	Aranda::CORE::ServiceActions::ServiceActions
+[2018-03-16 17:41:51] CORE         INFO      	RegisterOnNewSendAsyncProcessMessageCallback registred
+[2018-03-16 17:41:51] CORE         INFO      	Aranda::CORE::ConfigurationActions::ConfigurationActions
+[2018-03-16 17:41:51] CORE         INFO      	Config file: C:\Program Files (x86)\Aranda\Aranda Agent 9\agent.config
+[2018-03-16 17:41:51] CORE         INFO      	Aranda::CORE::UserWatcherActions::UserWatcherActions
+[2018-03-16 17:41:51] CORE         INFO      	<<< Finish	Aranda::CORE::CoreService::CreateCoreModule
+[2018-03-16 17:41:51] CORE         INFO      	>>> Start	Aranda::CORE::CoreService::AddCoreModuleToModuleDependencies
+[2018-03-16 17:41:51] CORE         INFO      	<<< Finish	Aranda::CORE::CoreService::AddCoreModuleToModuleDependencies
+[2018-03-16 17:41:51] CORE         INFO      	>>> Start	Aranda::CORE::CoreService::CreateAndConfigureModules
+[2018-03-16 17:41:51] CORE         INFO      	CreateModuleSystem: Create ModuleValidator using ModuleManager and weakConfg
+[2018-03-16 17:41:51] AAM          INFO      	>>Aranda::AAM::AAMModule::AAMModule
+[2018-03-16 17:41:51] ModuleSystem INFO      	Module created: 1
+[2018-03-16 17:41:51] APM          INFO      	>>Aranda::APM::APMModule::APMModule
+[2018-03-16 17:41:51] APM          INFO      	APM creating temp path
+[2018-03-16 17:41:51] ModuleSystem INFO      	Module created: 28
+[2018-03-16 17:41:51] APWM         INFO      	>>Aranda::APWM::APWMModule::APWMModule
+[2018-03-16 17:41:51] ModuleSystem INFO      	Module created: 31
+[2018-03-16 17:41:51] ARS          INFO      	>>Aranda::ARS::ARSModule::ARSModule
+[2018-03-16 17:41:51] ARS          INFO      	ARS Service application created
+[2018-03-16 17:41:51] ModuleSystem INFO      	Module created: 30
+[2018-03-16 17:41:51] ASD          INFO      	>>Aranda::ASD::ASDModule::ASDModule
+[2018-03-16 17:41:51] ModuleSystem INFO      	Module created: 8
+[2018-03-16 17:41:51] ASM          INFO      	>>Aranda::ASM::ASMModule::ASMModule
+[2018-03-16 17:41:51] ModuleSystem INFO      	Module created: 6
+[2018-03-16 17:41:51] ModuleSystem INFO      	Aranda::Common::ModuleValidator::ModuleValidator
+[2018-03-16 17:41:51] CORE         INFO      	Config file: C:\Program Files (x86)\Aranda\Aranda Agent 9\agent.config
+[2018-03-16 17:41:51] CORE         INFO      	>>> Start	Aranda::CORE::CoreService::GetExtensionListForModules
+[2018-03-16 17:41:51] CORE         INFO      	<<< Finish	Aranda::CORE::CoreService::GetExtensionListForModules
+[2018-03-16 17:41:51] CORE         INFO      	PostStart: Update ModuleValidator in CoreModule transfer the ownership
+[2018-03-16 17:41:51] CORE         INFO      	<<< Finish	Aranda::CORE::CoreService::CreateAndConfigureModules
+[2018-03-16 17:41:51] ActionSystem INFO      	Aranda::Common::ActionHandler::LoadSchedulesInScheduler 
+[2018-03-16 17:41:51] ActionSystem INFO      	Aranda::Common::ActionHandler::LoadSchedulesInScheduler schedules count=0
+[2018-03-16 17:41:51] CORE         INFO      	>>> Start	Aranda::CORE::CoreService::RunFirstConfigurationProcess
+[2018-03-16 17:41:51] CORE         INFO      	PostStart: About to launch UpdateConfigurationProcess
+[2018-03-16 17:41:51] CORE         INFO      	Config file: C:\Program Files (x86)\Aranda\Aranda Agent 9\agent.config
+[2018-03-16 17:41:52] CORE         INFO      	Aranda::CORE::ConfigurationActions::UpdateConfigurationFileFromRequest ﻿<q1:AgentConfiguration xmlns:q1="urn:arandasoft-com:agent"><q1:aam><q1:inventory logon="true"><q1:schedule type="3" period="1" dateTime="2018-02-20T08:07:43.0270667-05:00" /></q1:inventory><q1:fileInventory><q1:incremental logon="false"><q1:schedule type="4" period="1" dateTime="2018-02-20T08:07:43.0270667-05:00" /></q1:incremental><q1:total logon="false"><q1:schedule type="3" period="4" dateTime="2018-02-20T08:07:43.0270667-05:00" /></q1:total><q1:scan><q1:item>DOC</q1:item><q1:item>DOCX</q1:item><q1:item>XLS</q1:item><q1:item>XLSX</q1:item><q1:item>PPT</q1:item><q1:item>PPTX</q1:item><q1:item>TXT</q1:item><q1:item>RTF</q1:item><q1:item>PDF</q1:item><q1:item>GIF</q1:item><q1:item>JPG</q1:item><q1:item>JPEG</q1:item><q1:item>PNG</q1:item><q1:item>BMP</q1:item><q1:item>AVI</q1:item><q1:item>MPG</q1:item><q1:item>WMV</q1:item><q1:item>MP3</q1:item><q1:item>WAV</q1:item><q1:item>AIF</q1:item><q1:item>MID</q1:item><q1:item>MIDI</q1:item></q1:scan><q1:executables><q1:item>COM</q1:item><q1:item>EXE</q1:item><q1:item>DLL</q1:item></q1:executables><q1:exclusion><q1:files><q1:item>dll</q1:item></q1:files><q1:paths /></q1:exclusion></q1:fileInventory><q1:synchronization logon="false"><q1:schedule type="2" period="10" dateTime="2018-02-20T08:07:43.0270667-05:00" /></q1:synchronization></q1:aam><q1:apwm><q1:inventory logon="false"><q1:schedule type="3" period="1" dateTime="2018-02-20T08:07:43.0270667-05:00" /></q1:inventory><q1:synchronization logon="false"><q1:schedule type="2" period="60" dateTime="2018-02-20T08:07:43.0270667-05:00" /></q1:synchronization></q1:apwm><q1:asd><q1:synchronization logon="false"><q1:schedule type="2" period="10" dateTime="2018-02-20T08:07:43.0270667-05:00" /></q1:synchronization></q1:asd><q1:apm><q1:inventory logon="true"><q1:schedule type="3" period="1" dateTime="2018-02-20T08:07:43.0270667-05:00" /></q1:inventory><q1:synchronization logon="false"><q1:schedule type="2" period="60" dateTime="2018-02-20T08:07:43.0270667-05:00" /></q1:synchronization></q1:apm><q1:asm /><q1:ars /><q1:profile id="1" /><q1:communication port="9025" registerPeriod="5"><q1:fileSharing port="0" retention="1" type="4" download="1024" upload="1024" /></q1:communication></q1:AgentConfiguration>
+[2018-03-16 17:41:52] CORE         INFO      	Config file: C:\Program Files (x86)\Aranda\Aranda Agent 9\agent.config
+[2018-03-16 17:41:52] CORE         INFO      	Config file: C:\Program Files (x86)\Aranda\Aranda Agent 9\agent.config
+[2018-03-16 17:41:52] CORE         INFO      	Updating configuration ... Configuration written on disk.
+[2018-03-16 17:41:52] CORE         INFO      	Config file: C:\Program Files (x86)\Aranda\Aranda Agent 9\agent.config
+[2018-03-16 17:41:52] CORE         INFO      	 Configuration was downloaded 
+ C:\Program Files (x86)\Aranda\Aranda Agent 9\agent.config : <Agent:AgentConfiguration xmlns:Agent="urn:arandasoft-com:agent"><Agent:aam><Agent:inventory logon="false"><Agent:schedule dateTime="2018-02-20T13:07:43Z" period="1440" type="2"></Agent:schedule></Agent:inventory><Agent:fileInventory><Agent:incremental logon="false"><Agent:schedule dateTime="2018-02-20T13:07:43Z" period="10080" type="2"></Agent:schedule></Agent:incremental><Agent:total logon="false"><Agent:schedule dateTime="2018-02-20T13:07:43Z" period="5760" type="2"></Agent:schedule></Agent:total><Agent:scan><Agent:item>DOC</Agent:item><Agent:item>DOCX</Agent:item><Agent:item>XLS</Agent:item><Agent:item>XLSX</Agent:item><Agent:item>PPT</Agent:item><Agent:item>PPTX</Agent:item><Agent:item>TXT</Agent:item><Agent:item>RTF</Agent:item><Agent:item>PDF</Agent:item><Agent:item>GIF</Agent:item><Agent:item>JPG</Agent:item><Agent:item>JPEG</Agent:item><Agent:item>PNG</Agent:item><Agent:item>BMP</Agent:item><Agent:item>AVI</Agent:item><Agent:item>MPG</Agent:item><Agent:item>WMV</Agent:item><Agent:item>MP3</Agent:item><Agent:item>WAV</Agent:item><Agent:item>AIF</Agent:item><Agent:item>MID</Agent:item><Agent:item>MIDI</Agent:item></Agent:scan><Agent:exclusion><Agent:files><Agent:item>dll</Agent:item></Agent:files><Agent:paths></Agent:paths></Agent:exclusion></Agent:fileInventory><Agent:synchronization logon="false"><Agent:schedule dateTime="2018-02-20T13:07:43Z" period="10" type="2"></Agent:schedule></Agent:synchronization></Agent:aam><Agent:apwm><Agent:inventory logon="false"><Agent:schedule dateTime="2018-02-20T13:07:43Z" period="1440" type="2"></Agent:schedule></Agent:inventory><Agent:synchronization logon="false"><Agent:schedule dateTime="2018-02-20T13:07:43Z" period="60" type="2"></Agent:schedule></Agent:synchronization></Agent:apwm><Agent:asd><Agent:synchronization logon="false"><Agent:schedule dateTime="2018-02-20T13:07:43Z" period="10" type="2"></Agent:schedule></Agent:synchronization></Agent:asd><Agent:apm><Agent:inventory logon="true"><Agent:schedule dateTime="2018-02-20T13:07:43Z" period="1440" type="2"></Agent:schedule></Agent:inventory><Agent:synchronization logon="false"><Agent:schedule dateTime="2018-02-20T13:07:43Z" period="60" type="2"></Agent:schedule></Agent:synchronization></Agent:apm><Agent:asm><Agent:inventory logon="false"></Agent:inventory></Agent:asm><Agent:ars></Agent:ars><Agent:profile id="1"></Agent:profile><Agent:communication port="9025" registerPeriod="5"><Agent:serverAddress><Agent:url>http://bg-d-admserver1/conserver</Agent:url></Agent:serverAddress><Agent:fileSharing download="1024" port="0" retention="7" type="3" upload="1024"></Agent:fileSharing></Agent:communication></Agent:AgentConfiguration>
+[2018-03-16 17:41:52] CORE         INFO      	<<< Finish	Aranda::CORE::CoreService::RunFirstConfigurationProcess
+[2018-03-16 17:41:52] CORE         INFO      	>>> Start	Aranda::CORE::CoreService::FirstRegisterToConserver
+[2018-03-16 17:41:52] CORE         INFO      	>>>> Register with name BG-D-JRODRIGU01
+[2018-03-16 17:41:54] CORE         INFO      	BG-D-JRODRIGU01 with GUID {771EDCFE-2BED-4653-A795-4F34BA886EB5-01D3AF08-9EC24F99} registered on http://bg-d-admserver1/conserver/CommunicationNode 
+[2018-03-16 17:41:54] CORE         INFO      	<<< Finish	Aranda::CORE::CoreService::FirstRegisterToConserver
+[2018-03-16 17:41:54] CORE         INFO      	>>> Start	Aranda::CORE::CoreService::InitializeCoreModule
+[2018-03-16 17:41:54] CORE         INFO      	Aranda::CORE::UserWatcherActions::CloseAllCoreUsers
+[2018-03-16 17:41:54] CORE         INFO      	<<< Finish	Aranda::CORE::CoreService::InitializeCoreModule
+[2018-03-16 17:41:54] CORE         INFO      	>>> Start	Aranda::CORE::CoreBase::UpdateInitFlagInDB
+[2018-03-16 17:41:54] CORE         INFO      	<<< Finish	Aranda::CORE::CoreBase::UpdateInitFlagInDB
+[2018-03-16 17:41:54] CORE         INFO      	>>> Start	Aranda::CORE::CommunicationSystem::StartWebService
+[2018-03-16 17:41:54] CORE         INFO      	AdministationWS: Port=9025 UseSSL=0
+[2018-03-16 17:41:54] CORE         INFO      	AdministationWS: Initialize Guid
+[2018-03-16 17:41:54] CORE         INFO      	<<< Finish	Aranda::CORE::CommunicationSystem::StartWebService
+[2018-03-16 17:41:54] CORE         INFO      	>>> Start	Aranda::CORE::CoreService::InitializeModules
+[2018-03-16 17:41:54] CORE         INFO      	<<< Finish	Aranda::CORE::CoreService::InitializeModules
+[2018-03-16 17:41:54] CORE         INFO      	=====================================================================================
+[2018-03-16 17:41:54] CORE         INFO      	=                            ACORE Agent started                                    =
+[2018-03-16 17:41:54] CORE         INFO      	Config file: C:\Program Files (x86)\Aranda\Aranda Agent 9\agent.config
+[2018-03-16 17:41:54] CORE         INFO      	=====================================================================================
+[2018-03-16 17:41:54] APM          INFO      	Aranda::APM::APMModule::OnInit
+[2018-03-16 17:41:54] ARS          INFO      	Aranda::ARS::ARSModule::OnInit
+[2018-03-16 17:41:54] AAM          INFO      	AAM Service application created
+[2018-03-16 17:41:54] AAM          INFO      	Aranda::AAM::InventoryActions::OnUpdateConfiguration
+[2018-03-16 17:41:54] ASD          INFO      	Aranda::ASD::ASDModule::ASDOnInit
+[2018-03-16 17:41:54] ASD          ERROR     	No valid configuration set for ASD, schedule creation skipped
+[2018-03-16 17:41:54] AAM          INFO      	Aranda::AAM::AAMModule::OnInit
+[2018-03-16 17:41:54] ModuleSystem INFO      	Aranda::Common::ActionPerformerBase::CreatePeriodicAction APM_ACTIONCODE_28001INITIAL_APMINVENTORY = SchedulerId = 25 created successfully
+[2018-03-16 17:41:54] APWM         INFO      	Aranda::APWM::APWMModule::OnInit
+[2018-03-16 17:41:54] APM          INFO      	Aranda::APM::APMInventoryActions::OnGetInventory There is no Catalog in system getting a new one
+[2018-03-16 17:41:54] AAM          INFO      	Generating AAM inventory...
+[2018-03-16 17:41:54] Business     INFO      	SMBIOS from firmware table
+[2018-03-16 17:41:54] Business     INFO      	SMBIOS buffer size : 2753 bytes
+[2018-03-16 17:41:54] AAM          INFO      	Retrieving network adapters section
+[2018-03-16 17:41:54] ModuleSystem INFO      	Aranda::Common::ActionPerformerBase::CreatePeriodicAction AAM_ACTIONCODE_1036INITIAL_AAMINVENTORY = SchedulerId = 26 created successfully
+[2018-03-16 17:41:54] ASM          INFO      	Aranda::ASM::Service::ApplicationService::OnInit
+[2018-03-16 17:41:54] ModuleSystem INFO      	Aranda::Common::ActionPerformerBase::CreatePeriodicAction ASD_ACTIONCODE_8000_CLEAN_EXECUTION_FILES = SchedulerId = 29 created successfully
+[2018-03-16 17:41:54] ModuleSystem INFO      	Aranda::Common::ActionPerformerBase::CreatePeriodicAction AAM_ACTIONCODE_1037INITIAL_AFLINVENTORY = SchedulerId = 32 created successfully
+[2018-03-16 17:41:54] ModuleSystem INFO      	Aranda::Common::ActionPerformerBase::CreatePeriodicAction ASM_ACTIONCODE_6001 = SchedulerId = 33 created successfully
+[2018-03-16 17:41:54] ASM          INFO      	Aranda::ASM::Service::ApplicationService::CreateMidNightInventory replaced
+[2018-03-16 17:41:54] ASD          INFO      	Looking for execution files to delete
+[2018-03-16 17:41:54] ASD          INFO      	Execution 0 will be not deleted in database, it will be deleted when complete!
+[2018-03-16 17:41:54] ASM          INFO      	Aranda::ASM::Service::ApplicationService::OnGetInventoryCreate Inventory
+[2018-03-16 17:41:54] ASM          INFO      	Aranda::ASM::Service::ApplicationService::GetInventory Locked adquired, now working
+[2018-03-16 17:41:54] AAM          INFO      	Retrieving setup section
+[2018-03-16 17:41:54] AAM          INFO      	Retrieving operating system section
+[2018-03-16 17:41:54] AAM          ERROR     	AAM Inventory already running
+[2018-03-16 17:41:54] ASM          INFO      	Aranda::ASM::Service::ApplicationService::OnGetInventoryCreate MonthlyInventory
+[2018-03-16 17:41:54] ASM          INFO      	Obtaining installed software from local database
+[2018-03-16 17:41:54] ASM          INFO      	Clustering
+[2018-03-16 17:41:54] ASM          INFO      	Clustering done in 0.001000 seconds
+[2018-03-16 17:41:54] ASM          ERROR     	Not data to create cluster inventory
+[2018-03-16 17:41:54] ASM          INFO      	Aranda::ASM::Service::ApplicationService::OnGetInventoryClean-Up Reported Usages
+[2018-03-16 17:41:54] AAM          INFO      	Retrieving system section
+[2018-03-16 17:41:55] CORE         INFO      	Downloading file Catalog/0 through HTTP client
+[2018-03-16 17:41:56] APM          INFO      	Aranda::APM::APMInventoryActions::OnGetInventory Generating Inventory
+[2018-03-16 17:41:56] APM          INFO      	shavlikManager.Scan
+[2018-03-16 17:41:56] APM          INFO      	Aranda::APM::ShavlikManager::Scan::<lambda_503716ced24270ddb41abb82425c1b1b>::operator () calling shavlik
+[2018-03-16 17:41:57] ARS          INFO      	ARS Service application ready to take control
+[2018-03-16 17:41:57] CORE         INFO      	>>>> Register with name BG-D-JRODRIGU01
+[2018-03-16 17:41:57] CORE         INFO      	Config file: C:\Program Files (x86)\Aranda\Aranda Agent 9\agent.config
+[2018-03-16 17:41:57] CORE         INFO      	Aranda::CORE::UserWatcherActions::KeepAliveUserAgent: about to launch user process in session id: 1
+[2018-03-16 17:41:57] CORE         INFO      	Aranda::CORE::FileProviderActions::DeleteOldDownloads cleaning old downloads...
+[2018-03-16 17:41:58] CORE         INFO      	Aranda::CORE::ConfigurationActions::ProcessRemoteFileStatusOnServer AgentProfile is uptodate
+[2018-03-16 17:41:59] AAM          INFO      	Afl Created
+[2018-03-16 17:42:00] AAM          INFO      	Flushing Afl Buffer: 10001 files, 5144 [ms] since last flush
+[2018-03-16 17:42:00] AAM          INFO      	OnFlushRequired: 10001 files in stage, HARVERSTINGfirst path in chunk C:\Agent\Agcom
+[2018-03-16 17:42:00] AAM          INFO      	Flushing Afl Buffer: 10001 files, 850 [ms] since last flush
+[2018-03-16 17:42:00] AAM          INFO      	OnFlushRequired: 10001 files in stage, HARVERSTINGfirst path in chunk C:\code\ADM\Aranda.ADM.Web.Console\node_modules\is-my-json-valid\test\json-schema-draft4
+[2018-03-16 17:42:01] AAM          INFO      	Flushing Afl Buffer: 10001 files, 928 [ms] since last flush
+[2018-03-16 17:42:01] AAM          INFO      	OnFlushRequired: 10001 files in stage, HARVERSTINGfirst path in chunk C:\code\ADM\AVS\Viewer\RDP\obj\x86\Debug
+[2018-03-16 17:42:03] CORE         INFO      	Opening channel in thread IPCCore:ServerThread:1, RegisterData =  Registered SessionId 1 UserName  UserProcessPid 25408 UserProcessPath  UserId 1
+[2018-03-16 17:42:03] AAM          INFO      	Flushing Afl Buffer: 10001 files, 1915 [ms] since last flush
+[2018-03-16 17:42:03] AAM          INFO      	OnFlushRequired: 10001 files in stage, HARVERSTINGfirst path in chunk C:\code\AGENT\sdk\Win32\boost\bin.v2\libs\math\build\msvc-14.1\dbg\thrd-mlt
+[2018-03-16 17:42:04] AAM          INFO      	Retrieving physical disk section
+[2018-03-16 17:42:04] AAM          INFO      	Flushing Afl Buffer: 10001 files, 854 [ms] since last flush
+[2018-03-16 17:42:04] AAM          INFO      	OnFlushRequired: 10001 files in stage, HARVERSTINGfirst path in chunk C:\code\AGENT\sdk\Win32\boost\boost\mpl\aux_\preprocessed\bcc_pre590
+[2018-03-16 17:42:05] AAM          INFO      	Retrieving cdrom section
+[2018-03-16 17:42:05] AAM          INFO      	Retrieving configuration section
+[2018-03-16 17:42:05] AAM          INFO      	Retrieving network drives section
+[2018-03-16 17:42:05] AAM          INFO      	Retrieving shared resources section
+[2018-03-16 17:42:05] AAM          INFO      	Retrieving bios section
+[2018-03-16 17:42:05] AAM          INFO      	Retrieving memory section
+[2018-03-16 17:42:05] AAM          INFO      	Retrieving processors section
+[2018-03-16 17:42:05] AAM          INFO      	Retrieving board slots section
+[2018-03-16 17:42:05] AAM          INFO      	Retrieving video section
+[2018-03-16 17:42:05] AAM          INFO      	Retrieving hardware section
+[2018-03-16 17:42:05] AAM          INFO      	Retrieving printers section
+[2018-03-16 17:42:05] AAM          INFO      	Retrieving keyboard section
+[2018-03-16 17:42:05] AAM          INFO      	Retrieving monitors section
+[2018-03-16 17:42:05] AAM          INFO      	Retrieving operating system section
+[2018-03-16 17:42:05] AAM          INFO      	Retrieving run commands section
+[2018-03-16 17:42:05] AAM          INFO      	Retrieving services section
+[2018-03-16 17:42:05] AAM          INFO      	Flushing Afl Buffer: 10001 files, 952 [ms] since last flush
+[2018-03-16 17:42:05] AAM          INFO      	OnFlushRequired: 10001 files in stage, HARVERSTINGfirst path in chunk C:\code\AGENT\sdk\Win32\boost\doc\html\boost_asio\reference\basic_socket\operator_eq_
+[2018-03-16 17:42:06] AAM          INFO      	Retrieving software registered section
+[2018-03-16 17:42:07] AAM          INFO      	About to save software chunk
+[2018-03-16 17:42:07] AAM          INFO      	Flushing Afl Buffer: 10001 files, 1930 [ms] since last flush
+[2018-03-16 17:42:07] AAM          INFO      	84[ms] saving 507 software registers
+[2018-03-16 17:42:07] AAM          INFO      	OnFlushRequired: 10001 files in stage, HARVERSTINGfirst path in chunk C:\code\AGENT\sdk\Win32\boost\libs\geometry\test\io\dsv
+[2018-03-16 17:42:08] AAM          INFO      	Retrieving local users section
+[2018-03-16 17:42:08] AAM          INFO      	AAM Inventory finished
+[2018-03-16 17:42:08] CORE         INFO      	File BG-D-JRODRIGU01000.aam was sent.
+[2018-03-16 17:42:08] AAM          INFO      	Flushing Afl Buffer: 10001 files, 856 [ms] since last flush
+[2018-03-16 17:42:08] AAM          INFO      	OnFlushRequired: 10001 files in stage, HARVERSTINGfirst path in chunk C:\code\AGENT\sdk\Win32\boost\libs\math\doc\equations
+[2018-03-16 17:42:09] AAM          INFO      	Flushing Afl Buffer: 10001 files, 803 [ms] since last flush
+[2018-03-16 17:42:09] AAM          INFO      	OnFlushRequired: 10001 files in stage, HARVERSTINGfirst path in chunk C:\code\AGENT\sdk\Win32\boost\libs\regex\test\regress
+[2018-03-16 17:42:10] AAM          INFO      	Flushing Afl Buffer: 10001 files, 1106 [ms] since last flush
+[2018-03-16 17:42:10] AAM          INFO      	OnFlushRequired: 10001 files in stage, HARVERSTINGfirst path in chunk C:\code\AGENT\sdk\Win32\gsoap-2.8\gsoap\doc\isapi\html
+[2018-03-16 17:42:12] AAM          INFO      	Flushing Afl Buffer: 10001 files, 2559 [ms] since last flush
+[2018-03-16 17:42:12] AAM          INFO      	OnFlushRequired: 10001 files in stage, HARVERSTINGfirst path in chunk C:\code\AMDM\$tf\11
+[2018-03-16 17:42:14] AAM          INFO      	Flushing Afl Buffer: 10001 files, 1261 [ms] since last flush
+[2018-03-16 17:42:14] AAM          INFO      	OnFlushRequired: 10001 files in stage, HARVERSTINGfirst path in chunk C:\code\AMDM\Dev\AMDM\Aranda.ContentManagement.WindowsClient\Pages\Core\Media
+[2018-03-16 17:42:16] AAM          INFO      	Flushing Afl Buffer: 10001 files, 2016 [ms] since last flush
+[2018-03-16 17:42:16] AAM          INFO      	OnFlushRequired: 10001 files in stage, HARVERSTINGfirst path in chunk C:\code\AMDM\Trunk\AMDM\Aranda.PushServer
+[2018-03-16 17:42:17] AAM          INFO      	Flushing Afl Buffer: 10001 files, 930 [ms] since last flush
+[2018-03-16 17:42:17] AAM          INFO      	OnFlushRequired: 10001 files in stage, HARVERSTINGfirst path in chunk C:\Program Files\CMake\doc\cmake\html\module
+[2018-03-16 17:42:17] APM          INFO      	Aranda::APM::ShavlikManager::Scan::<lambda_503716ced24270ddb41abb82425c1b1b>::operator () shavlik called
+[2018-03-16 17:42:17] APM          INFO      	Files::CompressInventoryFile
+[2018-03-16 17:42:17] APM          INFO      	Files::SendInventory
+[2018-03-16 17:42:17] CORE         INFO      	File BG-D-JRODRIGU01000.apm was sent.
+[2018-03-16 17:42:18] AAM          INFO      	Flushing Afl Buffer: 10001 files, 1357 [ms] since last flush
+[2018-03-16 17:42:18] AAM          INFO      	OnFlushRequired: 10001 files in stage, HARVERSTINGfirst path in chunk C:\Program Files\dotnet\sdk\NuGetFallbackFolder\runtime.native.system.net.http\4.0.1
+[2018-03-16 17:42:20] AAM          INFO      	Flushing Afl Buffer: 10001 files, 1858 [ms] since last flush
+[2018-03-16 17:42:20] AAM          INFO      	OnFlushRequired: 10001 files in stage, HARVERSTINGfirst path in chunk C:\Program Files\Git\mingw64\libexec\git-core
+[2018-03-16 17:42:21] AAM          INFO      	Flushing Afl Buffer: 10001 files, 1072 [ms] since last flush
+[2018-03-16 17:42:21] AAM          INFO      	OnFlushRequired: 10001 files in stage, HARVERSTINGfirst path in chunk C:\Program Files\Microsoft SDKs\Azure\.NET SDK\v2.9\bin\plugins\Diagnostics\Monitor\x64\Extensions\ApplicationInsightsExtension
+[2018-03-16 17:42:22] AAM          INFO      	Flushing Afl Buffer: 10001 files, 1235 [ms] since last flush
+[2018-03-16 17:42:22] AAM          INFO      	OnFlushRequired: 10001 files in stage, HARVERSTINGfirst path in chunk C:\Program Files\WindowsApps\king.com.CandyCrushSodaSaga_1.106.700.0_x86__kgqvnymyfvs32\res_output\shared\diorama\diorama24\episode71\models\interactable
+[2018-03-16 17:42:22] CORE         INFO      	Config file: C:\Program Files (x86)\Aranda\Aranda Agent 9\agent.config
+[2018-03-16 17:42:22] AAM          INFO      	Aranda::AAM::AAMModule::OnNewConfiguration
+[2018-03-16 17:42:22] ASM          INFO      	Aranda::ASM::ASMModule::OnNewConfiguration
+[2018-03-16 17:42:22] ASD          INFO      	Aranda::ASD::ASDModule::OnNewConfiguration
+[2018-03-16 17:42:22] ASM          INFO      	Aranda::ASM::ASMModule::OnNewConfiguration configuration {}
+
+[2018-03-16 17:42:22] APWM         INFO      	Aranda::APWM::APWMModule::OnNewConfiguration
+[2018-03-16 17:42:22] APM          INFO      	Aranda::APM::APMModule::OnNewConfiguration
+[2018-03-16 17:42:22] ASD          INFO      	Aranda::ASD::ASDModule::OnNewConfiguration configuration has changed
+[2018-03-16 17:42:22] ASM          INFO      	Aranda::ASM::ASMModule::OnNewConfiguration configuration has changed
+[2018-03-16 17:42:22] AAM          INFO      	Aranda::AAM::AAMModule::OnNewConfiguration configuration has changed
+[2018-03-16 17:42:22] ModuleSystem INFO      	Aranda::Common::ActionPerformerBase::ReplacePeriodicAction
+[2018-03-16 17:42:22] AAM          INFO      	Aranda::AAM::AAMModule::ReScheduleModuleActions rescheduling actions
+[2018-03-16 17:42:22] ModuleSystem INFO      	Aranda::Common::ActionPerformerBase::ReplacePeriodicAction
+[2018-03-16 17:42:22] APWM         INFO      	Aranda::APWM::APWMModule::OnNewConfiguration configuration has changed
+[2018-03-16 17:42:22] APM          INFO      	Aranda::APM::APMModule::OnNewConfiguration configuration has changed
+[2018-03-16 17:42:22] ModuleSystem INFO      	Aranda::Common::ActionPerformerBase::ReplacePeriodicAction
+[2018-03-16 17:42:23] APM          INFO      	Aranda::APM::APMModule::ReScheduleModuleActions rescheduling actions
+[2018-03-16 17:42:23] ModuleSystem INFO      	Aranda::Common::ActionPerformerBase::ReplacePeriodicAction
+[2018-03-16 17:42:23] ModuleSystem INFO      	Aranda::Common::ActionPerformerBase::ReplacePeriodicAction
+[2018-03-16 17:42:23] ASM          INFO      	Aranda::ASM::Service::ApplicationService::OnUpdateConfiguration configuration {}
+
+[2018-03-16 17:42:23] ModuleSystem INFO      	Aranda::Common::ActionPerformerBase::CreatePeriodicAction ASD_ACTIONCODE_8001 = SchedulerId = 56 created successfully
+[2018-03-16 17:42:23] ASD          INFO      	Aranda::ASD::ASDModule::OnNewConfiguration Schedule ActionCodes::Notify replaced
+[2018-03-16 17:42:23] ASM          INFO      	Aranda::ASM::Service::ApplicationService::OnUpdateConfiguration configuration has changed
+[2018-03-16 17:42:23] AAM          INFO      	Generating AAM inventory...
+[2018-03-16 17:42:23] Business     INFO      	SMBIOS from firmware table
+[2018-03-16 17:42:23] Business     INFO      	SMBIOS buffer size : 2753 bytes
+[2018-03-16 17:42:23] AAM          INFO      	Retrieving network adapters section
+[2018-03-16 17:42:23] ModuleSystem INFO      	Aranda::Common::ActionPerformerBase::CreatePeriodicAction AAM_ACTIONCODE_1036 = SchedulerId = 61 created successfully
+[2018-03-16 17:42:23] ModuleSystem INFO      	Aranda::Common::ActionPerformerBase::ReplacePeriodicAction
+[2018-03-16 17:42:23] APM          INFO      	Aranda::APM::APMInventoryActions::OnGetInventory Generating Inventory
+[2018-03-16 17:42:23] APM          INFO      	shavlikManager.Scan
+[2018-03-16 17:42:23] APM          INFO      	Aranda::APM::ShavlikManager::Scan::<lambda_503716ced24270ddb41abb82425c1b1b>::operator () calling shavlik
+[2018-03-16 17:42:23] ModuleSystem INFO      	Aranda::Common::ActionPerformerBase::CreatePeriodicAction APWM_ACTIONCODE_31002 = SchedulerId = 62 created successfully
+[2018-03-16 17:42:23] ModuleSystem INFO      	Aranda::Common::ActionPerformerBase::ReplacePeriodicAction
+[2018-03-16 17:42:23] ModuleSystem INFO      	Aranda::Common::ActionPerformerBase::CreatePeriodicAction APM_ACTIONCODE_28001 = SchedulerId = 63 created successfully
+[2018-03-16 17:42:23] ModuleSystem INFO      	Aranda::Common::ActionPerformerBase::ReplacePeriodicAction
+[2018-03-16 17:42:23] AAM          ERROR     	AFL is running, kindly wait until it finish
+[2018-03-16 17:42:23] ModuleSystem INFO      	Aranda::Common::ActionPerformerBase::CreatePeriodicAction AAM_ACTIONCODE_1038 = SchedulerId = 64 created successfully
+[2018-03-16 17:42:23] ModuleSystem INFO      	Aranda::Common::ActionPerformerBase::ReplacePeriodicAction
+[2018-03-16 17:42:23] ModuleSystem INFO      	Aranda::Common::ActionPerformerBase::CreatePeriodicAction APWM_ACTIONCODE_31005 = SchedulerId = 65 created successfully
+[2018-03-16 17:42:23] ModuleSystem INFO      	Aranda::Common::ActionPerformerBase::CreatePeriodicAction APM_ACTIONCODE_28002 = SchedulerId = 66 created successfully
+[2018-03-16 17:42:23] AAM          ERROR     	AFL is running, kindly wait until it finish
+[2018-03-16 17:42:23] ModuleSystem INFO      	Aranda::Common::ActionPerformerBase::CreatePeriodicAction AAM_ACTIONCODE_1037 = SchedulerId = 67 created successfully
+[2018-03-16 17:42:23] ModuleSystem INFO      	Aranda::Common::ActionPerformerBase::ReplacePeriodicAction
+[2018-03-16 17:42:23] ModuleSystem INFO      	Aranda::Common::ActionPerformerBase::CreatePeriodicAction AAM_ACTIONCODE_1046 = SchedulerId = 68 created successfully
+[2018-03-16 17:42:23] AAM          INFO      	Aranda::AAM::InventoryActions::OnUpdateConfiguration
+[2018-03-16 17:42:23] AAM          INFO      	Retrieving setup section
+[2018-03-16 17:42:23] AAM          INFO      	Retrieving operating system section
+[2018-03-16 17:42:23] AAM          INFO      	Retrieving system section
+[2018-03-16 17:42:23] Business     INFO      	Elapsedtime getting pending task 469[ms]
+[2018-03-16 17:42:24] AAM          INFO      	Flushing Afl Buffer: 10001 files, 2017 [ms] since last flush
+[2018-03-16 17:42:24] AAM          INFO      	OnFlushRequired: 10001 files in stage, HARVERSTINGfirst path in chunk C:\Program Files\WindowsApps\microsoft.windowscommunicationsapps_17.8008.42001.0_x64__8wekyb3d8bbwe\images
+[2018-03-16 17:42:25] AAM          INFO      	Flushing Afl Buffer: 10001 files, 1184 [ms] since last flush
+[2018-03-16 17:42:25] AAM          INFO      	OnFlushRequired: 10001 files in stage, HARVERSTINGfirst path in chunk C:\Program Files (x86)\InstallShield\2013\Support\Oracle Instant Client
+[2018-03-16 17:42:27] AAM          INFO      	Retrieving physical disk section
+[2018-03-16 17:42:28] AAM          INFO      	Flushing Afl Buffer: 10001 files, 2268 [ms] since last flush
+[2018-03-16 17:42:28] AAM          INFO      	OnFlushRequired: 10001 files in stage, HARVERSTINGfirst path in chunk C:\Program Files (x86)\Microsoft SDKs\NuGetPackages\System.Reflection.Emit.ILGeneration\4.0.0\ref\dotnet\fr
+[2018-03-16 17:42:28] AAM          INFO      	Retrieving cdrom section
+[2018-03-16 17:42:28] AAM          INFO      	Retrieving configuration section
+[2018-03-16 17:42:28] AAM          INFO      	Retrieving network drives section
+[2018-03-16 17:42:29] AAM          INFO      	Retrieving shared resources section
+[2018-03-16 17:42:29] AAM          INFO      	Retrieving bios section
+[2018-03-16 17:42:29] AAM          INFO      	Retrieving memory section
+[2018-03-16 17:42:29] AAM          INFO      	Retrieving processors section
+[2018-03-16 17:42:29] AAM          INFO      	Retrieving board slots section
+[2018-03-16 17:42:29] AAM          INFO      	Retrieving video section
+[2018-03-16 17:42:29] AAM          INFO      	Retrieving hardware section
+[2018-03-16 17:42:29] AAM          INFO      	Retrieving printers section
+[2018-03-16 17:42:29] AAM          INFO      	Retrieving keyboard section
+[2018-03-16 17:42:29] AAM          INFO      	Retrieving monitors section
+[2018-03-16 17:42:29] AAM          INFO      	Retrieving operating system section
+[2018-03-16 17:42:29] AAM          INFO      	Retrieving run commands section
+[2018-03-16 17:42:29] AAM          INFO      	Retrieving services section
+[2018-03-16 17:42:29] AAM          INFO      	Flushing Afl Buffer: 10001 files, 1230 [ms] since last flush
+[2018-03-16 17:42:29] AAM          INFO      	OnFlushRequired: 10001 files in stage, HARVERSTINGfirst path in chunk C:\Program Files (x86)\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.NET.Native.Framework.1.3\1.3\x86\ret\ILTransformed
+[2018-03-16 17:42:29] AAM          INFO      	Retrieving software registered section
+[2018-03-16 17:42:30] AAM          INFO      	About to save software chunk
+[2018-03-16 17:42:30] AAM          INFO      	85[ms] saving 507 software registers
+[2018-03-16 17:42:30] AAM          INFO      	Flushing Afl Buffer: 10001 files, 1228 [ms] since last flush
+[2018-03-16 17:42:30] AAM          INFO      	OnFlushRequired: 10001 files in stage, HARVERSTINGfirst path in chunk C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\Extensions\Microsoft\VsGraphics\Assets\Scripts
+[2018-03-16 17:42:30] AAM          INFO      	Retrieving local users section
+[2018-03-16 17:42:31] AAM          INFO      	AAM Inventory finished
+[2018-03-16 17:42:32] CORE         INFO      	File BG-D-JRODRIGU01000.aam was sent.
+[2018-03-16 17:42:32] AAM          INFO      	Flushing Afl Buffer: 10001 files, 2137 [ms] since last flush
+[2018-03-16 17:42:32] AAM          INFO      	OnFlushRequired: 10001 files in stage, HARVERSTINGfirst path in chunk C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Application Type\Windows Store\10.0\Platforms\x64
+[2018-03-16 17:42:33] AAM          INFO      	Flushing Afl Buffer: 10001 files, 979 [ms] since last flush
+[2018-03-16 17:42:33] AAM          INFO      	OnFlushRequired: 10001 files in stage, HARVERSTINGfirst path in chunk C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.12.25827\crt\src\vcruntime
+[2018-03-16 17:42:34] AAM          INFO      	Flushing Afl Buffer: 10001 files, 1212 [ms] since last flush
+[2018-03-16 17:42:34] AAM          INFO      	OnFlushRequired: 10001 files in stage, HARVERSTINGfirst path in chunk C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Web\External\node_modules\table\node_modules\lodash
+[2018-03-16 17:42:36] AAM          INFO      	Flushing Afl Buffer: 10001 files, 1962 [ms] since last flush
+[2018-03-16 17:42:36] AAM          INFO      	OnFlushRequired: 10001 files in stage, HARVERSTINGfirst path in chunk C:\Program Files (x86)\MSBuild\15.0\.Net\.NetNative\15.0.24211\x86\ilc\lib\Facades
+[2018-03-16 17:42:37] AAM          INFO      	Flushing Afl Buffer: 10001 files, 860 [ms] since last flush
+[2018-03-16 17:42:37] AAM          INFO      	OnFlushRequired: 10001 files in stage, HARVERSTINGfirst path in chunk C:\Program Files (x86)\SmartGit\git\usr\bin
+[2018-03-16 17:42:38] AAM          INFO      	Flushing Afl Buffer: 10001 files, 864 [ms] since last flush
+[2018-03-16 17:42:38] AAM          INFO      	OnFlushRequired: 10001 files in stage, HARVERSTINGfirst path in chunk C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\um
+[2018-03-16 17:42:40] AAM          INFO      	Flushing Afl Buffer: 10001 files, 2319 [ms] since last flush
+[2018-03-16 17:42:40] AAM          INFO      	OnFlushRequired: 10001 files in stage, HARVERSTINGfirst path in chunk C:\Program Files (x86)\Windows Kits\10\Lib\10.0.16299.0\um\x64
+[2018-03-16 17:42:42] AAM          INFO      	Flushing Afl Buffer: 10001 files, 1306 [ms] since last flush
+[2018-03-16 17:42:42] APM          INFO      	Aranda::APM::ShavlikManager::Scan::<lambda_503716ced24270ddb41abb82425c1b1b>::operator () shavlik called
+[2018-03-16 17:42:42] APM          INFO      	Files::CompressInventoryFile
+[2018-03-16 17:42:42] AAM          INFO      	OnFlushRequired: 10001 files in stage, HARVERSTINGfirst path in chunk C:\ProgramData\Microsoft\Windows\AppRepository\Packages\Microsoft.WindowsMaps_5.1611.3341.0_x64__8wekyb3d8bbwe
+[2018-03-16 17:42:42] APM          INFO      	Files::SendInventory
+[2018-03-16 17:42:43] CORE         INFO      	File BG-D-JRODRIGU01000.apm was sent.
+[2018-03-16 17:42:44] AAM          INFO      	Flushing Afl Buffer: 10001 files, 2214 [ms] since last flush
+[2018-03-16 17:42:44] AAM          INFO      	OnFlushRequired: 10001 files in stage, HARVERSTINGfirst path in chunk C:\Qt\5.10.1\msvc2017_64\mkspecs\unsupported\vxworks-ppc-g++
+[2018-03-16 17:42:45] AAM          INFO      	Flushing Afl Buffer: 10001 files, 1145 [ms] since last flush
+[2018-03-16 17:42:45] AAM          INFO      	OnFlushRequired: 10001 files in stage, HARVERSTINGfirst path in chunk C:\Qt\5.11.0\msvc2017_64\qml\QtPositioning
+[2018-03-16 17:42:46] AAM          INFO      	Flushing Afl Buffer: 10001 files, 1161 [ms] since last flush
+[2018-03-16 17:42:46] AAM          INFO      	OnFlushRequired: 10001 files in stage, HARVERSTINGfirst path in chunk C:\Qt\Docs\Qt-5.10.1\qtquick
+[2018-03-16 17:42:48] AAM          INFO      	Flushing Afl Buffer: 10001 files, 2235 [ms] since last flush
+[2018-03-16 17:42:48] AAM          INFO      	OnFlushRequired: 10001 files in stage, HARVERSTINGfirst path in chunk C:\Qt\Docs\Qt-5.11.0\qtgui
+[2018-03-16 17:42:50] AAM          INFO      	Flushing Afl Buffer: 10001 files, 1379 [ms] since last flush
+[2018-03-16 17:42:50] AAM          INFO      	OnFlushRequired: 10001 files in stage, HARVERSTINGfirst path in chunk C:\Qt\Docs\Qt-5.11.0\qtxmlpatterns
+[2018-03-16 17:42:52] AAM          INFO      	Flushing Afl Buffer: 10001 files, 2310 [ms] since last flush
+[2018-03-16 17:42:52] AAM          INFO      	OnFlushRequired: 10001 files in stage, HARVERSTINGfirst path in chunk C:\Qt\Examples\Qt-5.11.0\quick\demos\maroon\doc\images
+[2018-03-16 17:42:54] AAM          INFO      	Flushing Afl Buffer: 10001 files, 1536 [ms] since last flush
+[2018-03-16 17:42:54] AAM          INFO      	OnFlushRequired: 10001 files in stage, HARVERSTINGfirst path in chunk C:\Qt\Tools\QtCreator\bin\qml\QtQuick\Controls.2\designer\images
+[2018-03-16 17:42:56] AAM          INFO      	Flushing Afl Buffer: 10001 files, 2596 [ms] since last flush
+[2018-03-16 17:42:56] AAM          INFO      	OnFlushRequired: 10001 files in stage, HARVERSTINGfirst path in chunk C:\Users\josnelihurt.rodrigue\.nuget\packages\runtime.aot.system.text.encoding.extensions\4.0.11
+[2018-03-16 17:42:57] AAM          ERROR     	Acceso denegado
+[2018-03-16 17:42:58] AAM          INFO      	Flushing Afl Buffer: 10001 files, 1325 [ms] since last flush
+[2018-03-16 17:42:58] AAM          INFO      	OnFlushRequired: 10001 files in stage, HARVERSTINGfirst path in chunk C:\Users\josnelihurt.rodrigue\AppData\Local\Google\Chrome\User Data\Default\Extensions\ghbmnnjooekpmoecnnnilnnbdlolhkhi\1.4_1
+[2018-03-16 17:43:00] AAM          INFO      	Flushing Afl Buffer: 10001 files, 2406 [ms] since last flush
+[2018-03-16 17:43:00] AAM          INFO      	OnFlushRequired: 10001 files in stage, HARVERSTINGfirst path in chunk C:\Users\josnelihurt.rodrigue\AppData\Local\Mozilla\Firefox\Profiles\8od75uqk.default\safebrowsing
+[2018-03-16 17:43:01] AAM          INFO      	Flushing Afl Buffer: 10001 files, 961 [ms] since last flush
+[2018-03-16 17:43:01] AAM          INFO      	OnFlushRequired: 10001 files in stage, HARVERSTINGfirst path in chunk C:\Users\josnelihurt.rodrigue\Documents\Fiddler2\Banners\2.0\Devcraft
+[2018-03-16 17:43:02] AAM          INFO      	Flushing Afl Buffer: 10001 files, 1307 [ms] since last flush
+[2018-03-16 17:43:02] AAM          INFO      	OnFlushRequired: 10001 files in stage, HARVERSTINGfirst path in chunk C:\WinDDK\7600.16385.1\src\print\mini\MDW\pcl5eres\w2k\ufm
+[2018-03-16 17:43:04] AAM          INFO      	Flushing Afl Buffer: 10001 files, 2219 [ms] since last flush
+[2018-03-16 17:43:04] AAM          INFO      	OnFlushRequired: 10001 files in stage, HARVERSTINGfirst path in chunk C:\Windows\CbsTemp\30650128_3831933098
+[2018-03-16 17:43:06] AAM          INFO      	Flushing Afl Buffer: 10001 files, 1265 [ms] since last flush
+[2018-03-16 17:43:06] AAM          INFO      	OnFlushRequired: 10001 files in stage, HARVERSTINGfirst path in chunk C:\Windows\InfusedApps\Packages\Microsoft.WindowsPhone_10.1510.9010.0_x64__8wekyb3d8bbwe\Assets
+[2018-03-16 17:43:08] AAM          INFO      	Flushing Afl Buffer: 10001 files, 2110 [ms] since last flush
+[2018-03-16 17:43:08] AAM          INFO      	OnFlushRequired: 10001 files in stage, HARVERSTINGfirst path in chunk C:\Windows\PolicyDefinitions
+[2018-03-16 17:43:09] AAM          INFO      	Flushing Afl Buffer: 10001 files, 1087 [ms] since last flush
+[2018-03-16 17:43:09] AAM          INFO      	OnFlushRequired: 10001 files in stage, HARVERSTINGfirst path in chunk C:\Windows\System32\catroot\{F750E6C3-38EE-11D1-85E5-00C04FC295EE}
+[2018-03-16 17:43:10] AAM          INFO      	Flushing Afl Buffer: 10001 files, 1037 [ms] since last flush
+[2018-03-16 17:43:10] AAM          INFO      	OnFlushRequired: 10001 files in stage, HARVERSTINGfirst path in chunk C:\Windows\System32\es-MX
+[2018-03-16 17:43:12] AAM          INFO      	Flushing Afl Buffer: 10001 files, 2447 [ms] since last flush
+[2018-03-16 17:43:12] AAM          INFO      	OnFlushRequired: 10001 files in stage, HARVERSTINGfirst path in chunk C:\Windows\SysWOW64
+[2018-03-16 17:43:14] AAM          INFO      	Flushing Afl Buffer: 10001 files, 1720 [ms] since last flush
+[2018-03-16 17:43:14] AAM          INFO      	OnFlushRequired: 10001 files in stage, HARVERSTINGfirst path in chunk C:\Windows\WinSxS\amd64_microsoft-windows-directx-directinput_31bf3856ad364e35_10.0.10586.0_none_aa1db294b605f0f8
+[2018-03-16 17:43:17] AAM          INFO      	Flushing Afl Buffer: 10001 files, 2522 [ms] since last flush
+[2018-03-16 17:43:17] AAM          INFO      	OnFlushRequired: 10001 files in stage, HARVERSTINGfirst path in chunk C:\Windows\WinSxS\amd64_microsoft-windows-s..nent-sku-enterprise_31bf3856ad364e35_10.0.10586.0_none_d1e15062cfdaebeb
+[2018-03-16 17:43:18] AAM          INFO      	Flushing Afl Buffer: 10001 files, 1131 [ms] since last flush
+[2018-03-16 17:43:18] AAM          INFO      	OnFlushRequired: 10001 files in stage, HARVERSTINGfirst path in chunk C:\Windows\WinSxS\amd64_prndlclf.inf_31bf3856ad364e35_10.0.10586.0_none_2bbafc04c66c0b0f
+[2018-03-16 17:43:20] AAM          INFO      	Flushing Afl Buffer: 10001 files, 2292 [ms] since last flush
+[2018-03-16 17:43:20] AAM          INFO      	OnFlushRequired: 10001 files in stage, HARVERSTINGfirst path in chunk C:\Windows\WinSxS\FileMaps
+[2018-03-16 17:43:21] AAM          INFO      	Flushing Afl Buffer: 10001 files, 1135 [ms] since last flush
+[2018-03-16 17:43:21] AAM          INFO      	OnFlushRequired: 10001 files in stage, HARVERSTINGfirst path in chunk C:\Windows\WinSxS\Manifests
+[2018-03-16 17:43:22] AAM          INFO      	Flushing Afl Buffer: 10001 files, 1136 [ms] since last flush
+[2018-03-16 17:43:22] AAM          INFO      	OnFlushRequired: 10001 files in stage, HARVERSTINGfirst path in chunk C:\Windows\WinSxS\Manifests
+[2018-03-16 17:43:25] AAM          INFO      	Flushing Afl Buffer: 10001 files, 2534 [ms] since last flush
+[2018-03-16 17:43:25] AAM          INFO      	OnFlushRequired: 10001 files in stage, HARVERSTINGfirst path in chunk C:\Windows\WinSxS\Manifests
+[2018-03-16 17:43:26] AAM          INFO      	Afl OnHarvestingCompleted
+[2018-03-16 17:43:26] AAM          INFO      	OnFlushRequired: 3086 files in stage, HARVERSTINGfirst path in chunk C:\Windows\WinSxS\x86_microsoft-windows-photobase_31bf3856ad364e35_10.0.10586.0_none_70e76fe78cf819da
+[2018-03-16 17:43:26] AAM          INFO      	No more devices to scan
+[2018-03-16 17:43:26] AAM          INFO      	No more devices to scan
+[2018-03-16 17:43:26] AAM          INFO      	No more devices to scan
+[2018-03-16 17:43:41] CORE         INFO      	ACORE OnStop Init
+[2018-03-16 17:43:41] CORE         INFO      	ACORE OnStop Finish
+[2018-03-16 17:43:41] CORE         INFO      	ACORE Agent is stopping...
+[2018-03-16 17:43:41] CORE         INFO      	=====================================================================================
+[2018-03-16 17:43:41] CORE         INFO      	=                            ACORE Agent stopping                                   =
+[2018-03-16 17:43:41] CORE         INFO      	=====================================================================================
+[2018-03-16 17:43:41] CORE         INFO      	Aranda::CORE::CoreService::~CoreService
+[2018-03-16 17:43:41] CORE         INFO      	>>Aranda::CORE::CoreBase::~CoreBase
+[2018-03-16 17:43:41] CORE         INFO      	Aranda::CORE::CoreBase::~CoreBase stop poststart thread
+[2018-03-16 17:43:41] CORE         INFO      	Aranda::CORE::CoreBase::~CoreBase reset core module use_count 1
+[2018-03-16 17:43:41] ActionSystem INFO      	>>Aranda::Common::ActionSystem::Stop
+[2018-03-16 17:43:41] CORE         INFO      	Aranda::CORE::Module::~Module
+[2018-03-16 17:43:41] ActionSystem INFO      	Aranda::Common::ActionHandler::~ActionHandler
+[2018-03-16 17:43:41] CORE         INFO      	Aranda::CORE::ServiceActions::~ServiceActions
+[2018-03-16 17:43:41] ActionSystem INFO      	>>Aranda::Common::ActionSynchronizer::~ActionSynchronizer
+[2018-03-16 17:43:41] CORE         INFO      	Aranda::CORE::CoreActionsBase::~CoreActionsBase
+[2018-03-16 17:43:41] ActionSystem INFO      	Aranda::Common::ActionSynchronizer::~ActionSynchronizer Sending exit response to blocked reader queue
+[2018-03-16 17:43:41] CORE         INFO      	Aranda::CORE::ConfigurationActions::~ConfigurationActions
+[2018-03-16 17:43:41] CORE         INFO      	Aranda::CORE::CoreActionsBase::~CoreActionsBase
+[2018-03-16 17:43:41] ActionSystem ERROR     	ActionHandler::OnNewActionResponseFromWorker error where is this ActionId from? It hasn't been registred before!!
+[2018-03-16 17:43:41] ActionSystem INFO      	<<Aranda::Common::ActionSynchronizer::~ActionSynchronizer
+[2018-03-16 17:43:41] CORE         INFO      	Aranda::CORE::FileProviderActions::~FileProviderActions
+[2018-03-16 17:43:41] CORE         INFO      	Aranda::CORE::CoreActionsBase::~CoreActionsBase
+[2018-03-16 17:43:41] CORE         INFO      	Aranda::CORE::UserWatcherActions::~UserWatcherActions
+[2018-03-16 17:43:41] CORE         INFO      	Aranda::CORE::UserWatcherActions::CloseAllCoreUsers
+[2018-03-16 17:43:41] ActionSystem INFO      	>>Aranda::Common::ActionSystemDependencies::~ActionSystemDependencies
+[2018-03-16 17:43:41] CORE         INFO      	About to close user process with pid 25408, and userName (null)
+[2018-03-16 17:43:41] ActionSystem INFO      	>>Aranda::Common::ActionSystemDependencies::DestroyObjects
+[2018-03-16 17:43:41] CORE         INFO      	Aranda::CORE::CoreActionsBase::~CoreActionsBase
+[2018-03-16 17:43:41] ActionSystem INFO      	<<Aranda::Common::ActionSystemDependencies::~ActionSystemDependencies
+[2018-03-16 17:43:41] CORE         INFO      	Deleting Core Module
+[2018-03-16 17:43:41] ActionSystem INFO      	>>Aranda::Common::Worker::~Worker
+[2018-03-16 17:43:41] f:\builds\agent9\1\_work\7\s\base\common\actionsystem\private\worker\ThreadPool.hpp INFO      	>>Aranda::Common::ThreadPool<8>::~ThreadPool
+[2018-03-16 17:43:41] f:\builds\agent9\1\_work\7\s\base\common\actionsystem\private\worker\ThreadPool.hpp INFO      	>>Aranda::Common::ThreadPool<8>::JoinAll
+[2018-03-16 17:43:41] CORE         INFO      	Aranda::CORE::CoreBase::~CoreBase reset communication system use_count 1
+[2018-03-16 17:43:41] f:\builds\agent9\1\_work\7\s\base\common\actionsystem\private\worker\ThreadPool.hpp INFO      	>>Aranda::Common::ThreadPool<8>::WaitAll running threads 1
+[2018-03-16 17:43:41] CORE         INFO      	Aranda::CORE::CommunicationSystem::~CommunicationSystem
+[2018-03-16 17:43:41] f:\builds\agent9\1\_work\7\s\base\common\actionsystem\private\worker\ThreadPool.hpp INFO      	Aranda::Common::ThreadPool<8>::WaitAll::<lambda_77e31791acac811b85d2c0114eb94d5e>::operator () running threads 1
+[2018-03-16 17:43:41] CORE         INFO      	>>Aranda::CORE::CommunicationSystem::StopWebService
+[2018-03-16 17:43:41] CORE         INFO      	>>Aranda::CORE::AdministationWS::Stop
+[2018-03-16 17:43:42] ActionSystem ERROR     	Output queue does not exist
+[2018-03-16 17:43:42] ActionSystem ERROR     	Output queue does not exist
+[2018-03-16 17:43:43] CORE         INFO      	AdministationWS Exited
+[2018-03-16 17:43:43] CORE         INFO      	<<Aranda::CORE::AdministationWS::Stop
+[2018-03-16 17:43:43] CORE         INFO      	Aranda::CORE::AdministationWS::~AdministationWS
+[2018-03-16 17:43:43] CORE         INFO      	>>Aranda::CORE::AdministationWS::Stop
+[2018-03-16 17:43:43] CORE         INFO      	<<Aranda::CORE::AdministationWS::Stop
+[2018-03-16 17:43:43] CORE         INFO      	The Acore wservice stopped
+[2018-03-16 17:43:43] CORE         INFO      	<<Aranda::CORE::CommunicationSystem::StopWebService
+[2018-03-16 17:43:43] CORE         INFO      	Aranda::CORE::FileProvider::~FileProvider
+[2018-03-16 17:43:43] CORE         ERROR     	Error getting HTTP head response
+[2018-03-16 17:43:43] CORE         ERROR     	There is a problem downloading the file  
+[2018-03-16 17:43:43] CORE         INFO      	Stoping IPCCore
+[2018-03-16 17:43:43] CORE         INFO      	Stoping IPCBase
+[2018-03-16 17:43:43] CORE         INFO      	Aranda::CORE::IPCBase::StopMainReaderThread Stopping ipc main thread
+[2018-03-16 17:43:43] ActionSystem INFO      	Aranda::Common::ActionSystem::RunActionAsync Action system in abort mode
+[2018-03-16 17:43:43] f:\builds\agent9\1\_work\7\s\base\common\actionsystem\private\worker\ThreadPool.hpp INFO      	Aranda::Common::ThreadPool<8>::WaitAll::<lambda_77e31791acac811b85d2c0114eb94d5e>::operator () running threads 0
+[2018-03-16 17:43:43] f:\builds\agent9\1\_work\7\s\base\common\actionsystem\private\worker\ThreadPool.hpp INFO      	<<Aranda::Common::ThreadPool<8>::WaitAll
+[2018-03-16 17:43:43] f:\builds\agent9\1\_work\7\s\base\common\actionsystem\private\worker\ThreadPool.hpp INFO      	<<Aranda::Common::ThreadPool<8>::Task Thread fnc finished
+[2018-03-16 17:43:43] f:\builds\agent9\1\_work\7\s\base\common\actionsystem\private\worker\ThreadPool.hpp INFO      	Aranda::Common::ThreadPool<8>::JoinAll join thread id 688 
+[2018-03-16 17:43:43] f:\builds\agent9\1\_work\7\s\base\common\actionsystem\private\worker\ThreadPool.hpp INFO      	<<Aranda::Common::ThreadPool<8>::Task Thread fnc finished
+[2018-03-16 17:43:43] f:\builds\agent9\1\_work\7\s\base\common\actionsystem\private\worker\ThreadPool.hpp INFO      	<<Aranda::Common::ThreadPool<8>::Task Thread fnc finished
+[2018-03-16 17:43:43] f:\builds\agent9\1\_work\7\s\base\common\actionsystem\private\worker\ThreadPool.hpp INFO      	<<Aranda::Common::ThreadPool<8>::Task Thread fnc finished
+[2018-03-16 17:43:43] f:\builds\agent9\1\_work\7\s\base\common\actionsystem\private\worker\ThreadPool.hpp INFO      	<<Aranda::Common::ThreadPool<8>::Task Thread fnc finished
+[2018-03-16 17:43:43] f:\builds\agent9\1\_work\7\s\base\common\actionsystem\private\worker\ThreadPool.hpp INFO      	<<Aranda::Common::ThreadPool<8>::Task Thread fnc finished
+[2018-03-16 17:43:43] f:\builds\agent9\1\_work\7\s\base\common\actionsystem\private\worker\ThreadPool.hpp INFO      	<<Aranda::Common::ThreadPool<8>::Task Thread fnc finished
+[2018-03-16 17:43:43] f:\builds\agent9\1\_work\7\s\base\common\actionsystem\private\worker\ThreadPool.hpp INFO      	<<Aranda::Common::ThreadPool<8>::Task Thread fnc finished
+[2018-03-16 17:43:43] AAM          INFO      	Registry changes detected... running inventory
+[2018-03-16 17:43:43] ActionSystem INFO      	Aranda::Common::ActionSystem::RunActionAsync Action system in abort mode
+[2018-03-16 17:43:43] f:\builds\agent9\1\_work\7\s\base\common\actionsystem\private\worker\ThreadPool.hpp INFO      	Aranda::Common::ThreadPool<8>::JoinAll join thread id 692 
+[2018-03-16 17:43:43] f:\builds\agent9\1\_work\7\s\base\common\actionsystem\private\worker\ThreadPool.hpp INFO      	Aranda::Common::ThreadPool<8>::JoinAll join thread id 656 
+[2018-03-16 17:43:43] f:\builds\agent9\1\_work\7\s\base\common\actionsystem\private\worker\ThreadPool.hpp INFO      	Aranda::Common::ThreadPool<8>::JoinAll join thread id 668 
+[2018-03-16 17:43:43] f:\builds\agent9\1\_work\7\s\base\common\actionsystem\private\worker\ThreadPool.hpp INFO      	Aranda::Common::ThreadPool<8>::JoinAll join thread id 664 
+[2018-03-16 17:43:43] f:\builds\agent9\1\_work\7\s\base\common\actionsystem\private\worker\ThreadPool.hpp INFO      	Aranda::Common::ThreadPool<8>::JoinAll join thread id 676 
+[2018-03-16 17:43:43] f:\builds\agent9\1\_work\7\s\base\common\actionsystem\private\worker\ThreadPool.hpp INFO      	Aranda::Common::ThreadPool<8>::JoinAll join thread id 112 
+[2018-03-16 17:43:43] f:\builds\agent9\1\_work\7\s\base\common\actionsystem\private\worker\ThreadPool.hpp INFO      	Aranda::Common::ThreadPool<8>::JoinAll join thread id 132 
+[2018-03-16 17:43:43] f:\builds\agent9\1\_work\7\s\base\common\actionsystem\private\worker\ThreadPool.hpp INFO      	<<Aranda::Common::ThreadPool<8>::JoinAll
+[2018-03-16 17:43:43] f:\builds\agent9\1\_work\7\s\base\common\actionsystem\private\worker\ThreadPool.hpp INFO      	<<Aranda::Common::ThreadPool<8>::~ThreadPool
+[2018-03-16 17:43:43] ActionSystem INFO      	Stopping SchedulerClock
+[2018-03-16 17:43:43] ActionSystem INFO      	<<Aranda::Common::ActionSystem::Stop
+[2018-03-16 17:43:48] CORE         INFO      	IPCCore is now off
+[2018-03-16 17:43:48] CORE         INFO      	>>Aranda::CORE::IPCBase::~IPCBase
+[2018-03-16 17:43:48] CORE         INFO      	Stoping IPCBase
+[2018-03-16 17:43:48] CORE         INFO      	<<Aranda::CORE::IPCBase::~IPCBase
+[2018-03-16 17:43:48] CORE         ERROR     	ERROR IN IPC ??
+[2018-03-16 17:43:48] CORE         ERROR     	NO QUEUE ARANDA_IPC_Q_USER_TO_SERVICE_1
+[2018-03-16 17:43:48] CORE         INFO      	The ARANDA_IPC_Q_USER_TO_SERVICE_1 queue will be close do inactivity
+[2018-03-16 17:43:48] CORE         INFO      	The ARANDA_IPC_Q_SERVICE_TO_USER_1 queue will be close do inactivity
+[2018-03-16 17:43:48] CORE         INFO      	Aranda::CORE::CoreBase::~CoreBase reset modulesDependencies use_count 1
+[2018-03-16 17:43:48] CORE         INFO      	Aranda::CORE::CoreBase::~CoreBase reset moduleValidator use_count 1
+[2018-03-16 17:43:48] ModuleSystem INFO      	>>Aranda::Common::ModuleValidator::~ModuleValidator
+[2018-03-16 17:43:48] ModuleSystem INFO      	>>Aranda::Common::ModuleManager::~ModuleManager
+[2018-03-16 17:43:48] ModuleSystem INFO      	About to release module 1
+[2018-03-16 17:43:48] ModuleSystem INFO      	>>Aranda::Common::IModuleWrapper::~IModuleWrapper name C:\Program Files (x86)\Aranda\Aranda Agent 9\Aranda.Agent.AAM.Library.dll
+[2018-03-16 17:43:48] AAM          INFO      	>>Aranda::AAM::AAMModule::~AAMModule

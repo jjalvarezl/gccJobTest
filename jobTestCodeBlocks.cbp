@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="jobTestCodeBlocks" />
+		<Option pch_mode="2" />
+		<Option default_target="Release" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/jobTestCodeBlocks" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Option parameters="-id 123456" />
+				<Compiler>
+					<Add option="-std=c++11" />
+					<Add option="-g" />
+					<Add option="`wx-config --cxxflags`" />
+					<Add directory="include" />
+				</Compiler>
+				<Linker>
+					<Add option="`wx-config --libs`" />
+					<Add library="zlib-1.2.11/libz.a" />
+					<Add library="zlib-1.2.11/contrib/minizip/ioapi.o" />
+					<Add library="zlib-1.2.11/contrib/minizip/unzip.o" />
+					<Add library="zlib-1.2.11/contrib/minizip/zip.o" />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/jobTestCodeBlocks" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Option parameters="--WID=123456" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add option="-std=c++11" />
+					<Add option="`wx-config --cxxflags`" />
+					<Add directory="include" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add option="`wx-config --libs`" />
+					<Add library="zlib-1.2.11/libz.a" />
+					<Add library="zlib-1.2.11/contrib/minizip/ioapi.o" />
+					<Add library="zlib-1.2.11/contrib/minizip/unzip.o" />
+					<Add library="zlib-1.2.11/contrib/minizip/zip.o" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-std=c++11" />
+			<Add option="-fexceptions" />
+		</Compiler>
+		<Unit filename="Main.cpp" />
+		<Unit filename="Main.h" />
+		<Unit filename="include/FileMetadata.h" />
+		<Unit filename="include/LogLineMetadata.h" />
+		<Unit filename="include/LogMetadata.h" />
+		<Unit filename="include/MainView.h" />
+		<Unit filename="include/SqliteManagement.h" />
+		<Unit filename="include/ZlibManagement.h" />
+		<Unit filename="src/FileMetadata.cpp" />
+		<Unit filename="src/LogLineMetadata.cpp" />
+		<Unit filename="src/LogMetadata.cpp" />
+		<Unit filename="src/MainView.cpp" />
+		<Unit filename="src/SqliteManagement.cpp" />
+		<Unit filename="src/ZlibManagement.cpp" />
+		<Extensions>
+			<code_completion />
+			<debugger />
+			<envvars />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

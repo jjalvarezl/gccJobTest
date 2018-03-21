@@ -1,0 +1,20 @@
+Modo de empleo: /usr/bin/addr2line [opcion(es)] [direccion(es)]
+ Convierte direcciones en pares de nombre número/fila.
+ Si no se especifican direcciones en la línea de órdenes, se leerán de la entrada estándar
+ Las opciones son:
+  @<fichero>              Lee opciones del <fichero>
+  -b --target=<nombrebfd> Establece el formato del fichero binario
+  -e --exe=<ejecutable>   Establece el nombre del fichero de entrada
+                          (por defecto es a.out)
+  -i --inlines            Desenreda las funciones inline
+  -j --section=<nombre>   Lee los desplazamientos relativos a sección en lugar
+                          de las direcciones
+  -p --pretty-print       Hace la salida más fácil de leer para humanos
+  -s --basenames          Elimina los nombres de directorio
+  -f --functions          Muestra los nombres de función
+  -C --demangle[=estilo]  Desenreda los nombres de función
+  -h --help               Muestra esta información
+  -v --version            Muestra la versión del programa
+
+/usr/bin/addr2line: objetivos admitidos: elf64-x86-64 elf32-i386 elf32-iamcu elf32-x86-64 a.out-i386-linux pei-i386 pei-x86-64 elf64-l1om elf64-k1om elf64-little elf64-big elf32-little elf32-big pe-x86-64 pe-bigobj-x86-64 pe-i386 plugin srec symbolsrec verilog tekhex binary ihex
+Reportar bichos a <http://www.sourceware.org/bugzilla/>
