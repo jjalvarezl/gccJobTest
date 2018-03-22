@@ -1707,14 +1707,16 @@
 	<iterator>
 	<cstddef>
 
-1521581007 /home/jjalvarezl/Proyectos/jobTestCodeBlocks/include/MainView.h
+1521708674 /home/jjalvarezl/Proyectos/jobTestCodeBlocks/include/MainView.h
 	<iostream>
 	"wx/wx.h"
 	"wx/notebook.h"
 	"wx/gbsizer.h"
 	"wx/cmdline.h"
+	"SqliteManagement.h"
+	"ZlibManagement.h"
 
-1521581121 source:/home/jjalvarezl/Proyectos/jobTestCodeBlocks/src/MainView.cpp
+1521708642 source:/home/jjalvarezl/Proyectos/jobTestCodeBlocks/src/MainView.cpp
 	"MainView.h"
 
 1521581118 source:/home/jjalvarezl/Proyectos/jobTestCodeBlocks/Main.cpp
@@ -4688,7 +4690,7 @@
 1521691908 source:/home/jjalvarezl/Proyectos/jobTestCodeBlocks/src/ZlibManagement.cpp
 	"ZlibManagement.h"
 
-1521657502 /home/jjalvarezl/Proyectos/jobTestCodeBlocks/include/ZlibManagement.h
+1521707603 /home/jjalvarezl/Proyectos/jobTestCodeBlocks/include/ZlibManagement.h
 	<string.h>
 	<iostream>
 	<stdio.h>
@@ -4748,10 +4750,11 @@
 	<stdlib.h>
 	<sys/stat.h>
 
-1521693405 source:/home/jjalvarezl/Proyectos/jobTestCodeBlocks/src/SqliteManagement.cpp
+1521707289 source:/home/jjalvarezl/Proyectos/jobTestCodeBlocks/src/SqliteManagement.cpp
 	"SqliteManagement.h"
 
-1521693092 /home/jjalvarezl/Proyectos/jobTestCodeBlocks/include/SqliteManagement.h
+1521707276 /home/jjalvarezl/Proyectos/jobTestCodeBlocks/include/SqliteManagement.h
+	<sstream>
 	"FileMetadata.h"
 	"SqliteDBAnalysis.h"
 	"sqlite3.h"

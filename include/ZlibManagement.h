@@ -21,6 +21,8 @@ class ZlibManagement
         boost::container::vector<LogMetadata> getLogFiles();
         boost::container::vector<FileMetadata> getNormalFiles();
 
+        std::string printZipFiles();
+
     protected:
 
     private:

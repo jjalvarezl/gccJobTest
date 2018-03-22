@@ -189,3 +189,25 @@ bool ZlibManagement::uncompressFile(){
 
     return true;
 }
+
+std::string ZlibManagement::printZipFiles(){
+    std::stringstream output;
+
+    output << "Printing zip files structure:";
+
+    for (unsigned i = 0; i < this->logFiles.size(); ++i){
+        output << "\n\nFILE: "<<this->logFiles[i].getLogFilePath()->c_str();
+        output << "\n\tSIZE: "<<this->logFiles[i].getLogFileSize()<<" bytes";
+    }
+
+    for (unsigned i = 0; i < this->normalFiles.size(); ++i){
+        output << "\n\nFILE: "<<this->normalFiles[i].getFilePath()->c_str();
+        output << "\n\tSIZE: "<<this->normalFiles[i].getFileSize()<<" bytes";
+    }
+
+    output<<"\n\nEND ZIP FILES DATA PRINTING\n\n";
+
+    std::cout << output.str();
+
+    return output.str();
+}

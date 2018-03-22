@@ -1,8 +1,10 @@
 #ifndef SQLITEMANAGEMENT_H
 #define SQLITEMANAGEMENT_H
+#include <sstream>
 #include "FileMetadata.h"
 #include "SqliteDBAnalysis.h"
 #include "sqlite3.h"
+
 
 
 class SqliteManagement : FileMetadata
@@ -19,7 +21,7 @@ class SqliteManagement : FileMetadata
         static int callbackTableNamesWithLastIndex(void *data, int argc, char **argv, char **azColName);
         static int callbackRowsPerTable(void *data, int argc, char **argv, char **azColName);
 
-        void printSqliteDBAnalysis();
+        std::string printSqliteDBAnalysis();
 
         //Getters and setters
         void setDbFilePath (std::string* dbFilePath);

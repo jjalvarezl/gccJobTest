@@ -37,12 +37,12 @@
 				<Compiler>
 					<Add option="-O2" />
 					<Add option="-std=c++11" />
-					<Add option="`./wxWidgets-3.0.4/wx-config --cxxflags`" />
+					<Add option="`wx-config --cxxflags`" />
 					<Add directory="include" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
-					<Add option="`./wxWidgets-3.0.4/wx-config --libs`" />
+					<Add option="`wx-config --libs`" />
 					<Add library="zlib-1.2.11/libz.a" />
 					<Add library="zlib-1.2.11/contrib/minizip/ioapi.o" />
 					<Add library="zlib-1.2.11/contrib/minizip/unzip.o" />

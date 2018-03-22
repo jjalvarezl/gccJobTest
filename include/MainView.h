@@ -5,6 +5,8 @@
 #include "wx/notebook.h"
 #include "wx/gbsizer.h"
 #include "wx/cmdline.h"
+#include "SqliteManagement.h"
+#include "ZlibManagement.h"
 
 class MainView : public wxFrame
 {
@@ -16,9 +18,19 @@ class MainView : public wxFrame
 
     private:
         wxButton* hideme;
-        wxSizer* panel_sizer, *frame_sizer, *sw_sizer;
-        wxScrolledWindow* sw;
-        wxNotebook* nb;
+        wxSizer* panel_sizer, *frame_sizer, *scrolledWindow_sizer;
+        wxScrolledWindow* scrolledWindow;
+
+        //Window components
+        wxNotebook* notebookMain;
+
+        //Sizers for each tab
+        wxSizer* logsPanelSizer, *sqlitePanelSizer, *zipStructurePanelSizer;
+
+        //Text components for showing data
+        wxTextCtrl *textCtrlLogs;
+        wxTextCtrl *textCtrlSqlite;
+        wxTextCtrl *textCtrlZipStructure;
 };
 
 #endif // MAINVIEW_H
