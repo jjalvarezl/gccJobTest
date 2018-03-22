@@ -8,6 +8,15 @@ class SqliteDBAnalysis
         SqliteDBAnalysis();
         virtual ~SqliteDBAnalysis();
 
+        void addTableName (std::string tableName);
+        void addTableSize (std::string tableSize);
+        void addTableLastIdGenerated (std::string tableLastIdGenerated);
+
+        boost::container::vector<std::string> getTablesName ();
+        boost::container::vector<std::string> getTablesSize ();
+        boost::container::vector<std::string> getTableLastIdsGenerated ();
+
+
     protected:
 
     private:

@@ -1,6 +1,7 @@
 #ifndef SQLITEMANAGEMENT_H
 #define SQLITEMANAGEMENT_H
 #include "FileMetadata.h"
+#include "SqliteDBAnalysis.h"
 #include "sqlite3.h"
 
 
@@ -15,6 +16,11 @@ class SqliteManagement : FileMetadata
 
         void processSqliteDb ();
 
+        static int callbackTableNamesWithLastIndex(void *data, int argc, char **argv, char **azColName);
+        static int callbackLastIndexPerTable(void *data, int argc, char **argv, char **azColName);
+
+        void printSqliteDBAnalysis();
+
         //Getters and setters
         void setDbFilePath (std::string* dbFilePath);
         std::string* getDbFilePath();
@@ -25,7 +31,7 @@ class SqliteManagement : FileMetadata
         void setSqliteDb (sqlite3* sqliteDb);
         sqlite3* getSqliteDb();
 
-        static int callbackTableNames(void *data, int argc, char **argv, char **azColName);
+        SqliteDBAnalysis getSqliteDBAnalysis ();
 
     protected:
 
@@ -33,5 +39,7 @@ class SqliteManagement : FileMetadata
         SqliteManagement();
         static SqliteManagement* instance;
         sqlite3* sqliteDb;
+        SqliteDBAnalysis sqliteDBAnalysis;
+
 };
 #endif // SQLITEMANAGEMENT_H
