@@ -8,6 +8,7 @@
 #include "boost_1_66_0/boost/iterator.hpp"*/
 #include "MainView.h"
 #include "ZlibManagement.h"
+#include "InputPathDialog.h"
 
 using namespace std;
 

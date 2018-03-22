@@ -220,7 +220,7 @@ std::string ZlibManagement::printLogFiles(){
     for (unsigned i = 0; i < this->logFiles.size(); ++i){
         boost::filesystem::path p(this->logFiles[i]->getLogFilePath()->c_str());
 
-        output << "\n\n --------------------------------------------------------"<<
+        output << "\n\n --------------------------------------------------------"
             << "\nLOG FILE: "<<this->logFiles[i]->getLogFilePath()->c_str()
             << "\n\tLOG SIZE: "<<this->logFiles[i]->getLogFileSize()<<" bytes"
             << "\n\tNUMBER OF ERROR LINES: "<<this->logFiles[i]->getNumberErrorLogs()<<" times"

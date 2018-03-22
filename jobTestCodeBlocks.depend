@@ -1717,19 +1717,20 @@
 	"SqliteManagement.h"
 	"ZlibManagement.h"
 
-1521743055 source:/home/jjalvarezl/Proyectos/jobTestCodeBlocks/src/MainView.cpp
+1521743730 source:/home/jjalvarezl/Proyectos/jobTestCodeBlocks/src/MainView.cpp
 	"MainView.h"
 
-1521743201 source:/home/jjalvarezl/Proyectos/jobTestCodeBlocks/Main.cpp
+1521747596 source:/home/jjalvarezl/Proyectos/jobTestCodeBlocks/Main.cpp
 	"Main.h"
 
-1521743155 /home/jjalvarezl/Proyectos/jobTestCodeBlocks/Main.h
+1521746508 /home/jjalvarezl/Proyectos/jobTestCodeBlocks/Main.h
 	<iostream>
 	"sqlite3/sqlite3.h"
 	"wxWidgets-3.0.4/include/wx/wx.h"
 	"boost_1_66_0/boost/iterator.hpp"
 	"MainView.h"
 	"ZlibManagement.h"
+	"InputPathDialog.h"
 
 1521581121 /home/jjalvarezl/Proyectos/jobTestCodeBlocks/wxWidgets-3.0.4/include/wx/notebook.h
 	"wx/defs.h"
@@ -4688,7 +4689,7 @@
 
 1519129042 /usr/lib/x86_64-linux-gnu/wx/include/gtk2-unicode-3.1-unofficial/wx/setup.h
 
-1521736118 source:/home/jjalvarezl/Proyectos/jobTestCodeBlocks/src/ZlibManagement.cpp
+1521747578 source:/home/jjalvarezl/Proyectos/jobTestCodeBlocks/src/ZlibManagement.cpp
 	"ZlibManagement.h"
 
 1521728780 /home/jjalvarezl/Proyectos/jobTestCodeBlocks/include/ZlibManagement.h
@@ -4790,4 +4791,62 @@
 1519129042 /usr/include/wx-3.1-unofficial/wx/generic/treectlg.h
 	"wx/scrolwin.h"
 	"wx/pen.h"
+
+1521747904 /home/jjalvarezl/Proyectos/jobTestCodeBlocks/include/InputPathDialog.h
+	<wx/settings.h>
+	<wx/xrc/xmlres.h>
+	<wx/xrc/xh_bmp.h>
+	<wx/dialog.h>
+	<wx/iconbndl.h>
+	<wx/artprov.h>
+	<wx/sizer.h>
+	<wx/stattext.h>
+	<wx/textctrl.h>
+	<wx/button.h>
+	"MainView.h"
+	"ZlibManagement.h"
+
+1519129042 /usr/include/wx-3.1-unofficial/wx/xrc/xmlres.h
+	"wx/defs.h"
+	"wx/string.h"
+	"wx/dynarray.h"
+	"wx/arrstr.h"
+	"wx/datetime.h"
+	"wx/list.h"
+	"wx/gdicmn.h"
+	"wx/filesys.h"
+	"wx/bitmap.h"
+	"wx/icon.h"
+	"wx/artprov.h"
+	"wx/colour.h"
+	"wx/vector.h"
+	"wx/xrc/xmlreshandler.h"
+
+1519129042 /usr/include/wx-3.1-unofficial/wx/filesys.h
+	"wx/defs.h"
+	"wx/stream.h"
+	"wx/datetime.h"
+	"wx/filename.h"
+	"wx/hashmap.h"
+
+1519129042 /usr/include/wx-3.1-unofficial/wx/artprov.h
+	"wx/string.h"
+	"wx/bitmap.h"
+	"wx/icon.h"
+	"wx/iconbndl.h"
+
+1519129042 /usr/include/wx-3.1-unofficial/wx/xrc/xmlreshandler.h
+	"wx/defs.h"
+	"wx/string.h"
+	"wx/artprov.h"
+	"wx/colour.h"
+	"wx/filesys.h"
+	"wx/imaglist.h"
+	"wx/window.h"
+
+1519129042 /usr/include/wx-3.1-unofficial/wx/xrc/xh_bmp.h
+	"wx/xrc/xmlres.h"
+
+1521747564 source:/home/jjalvarezl/Proyectos/jobTestCodeBlocks/src/InputPathDialog.cpp
+	"InputPathDialog.h"
 

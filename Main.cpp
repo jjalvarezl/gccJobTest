@@ -2,11 +2,9 @@
 
 bool Main::OnInit()
 {
-    ZlibManagement::getInstance()->setCompressedFilePath(new string("/etc/Aranda/Aranda Agent 9/Aranda.zip"));
-    ZlibManagement::getInstance()->uncompressFile();
+    InputPathDialog *inputPathDialog = new InputPathDialog(wxT("Job Test Solution"));
+    inputPathDialog->Show(true);
 
-    MainView *mainView = new MainView(wxT("Job Test Solution"));
-    mainView->Show(true);
     return true;
 }
 
