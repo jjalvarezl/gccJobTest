@@ -53,15 +53,21 @@ void SqliteManagement::processSqliteDb (){
 }
 
 int SqliteManagement::callbackTableNamesWithLastIndex(void *data, int argc, char **argv, char **azColName){
-   int i;
-   fprintf(stderr, "%s: ", (const char*)data);
+    int i;
+    fprintf(stderr, "%s: ", (const char*)data);
 
-   for(i = 0; i<argc; i++){
-      printf("%s = %s\n", azColName[i], argv[i] ? argv[i] : "NULL");
-   }
+    for(i = 0; i<argc; i++){
+        if (strcmp(azColName[i], "tbl_name")==0){
+            SqliteManagement::getInstance()->getSqliteDBAnalysis().addTableName(std::string(argv[i] ? argv[i] : "NULL"));
+        }
+        if (strcmp(azColName[i], "tbl_name")==0){
+            SqliteManagement::getInstance()->getSqliteDBAnalysis().addTableLastIdGenerated(std::string(argv[i] ? argv[i] : "NULL"));
+        }
+        printf("%s = %s\n", azColName[i], argv[i] ? argv[i] : "NULL");
+    }
 
-   printf("\n");
-   return 0;
+    printf("\n");
+    return 0;
 }
 
 int SqliteManagement::callbackLastIndexPerTable(void *data, int argc, char **argv, char **azColName){

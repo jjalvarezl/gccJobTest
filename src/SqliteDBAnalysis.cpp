@@ -16,7 +16,7 @@ void SqliteDBAnalysis::addTableName (std::string tableName){
 }
 
 void SqliteDBAnalysis::addTableSize (std::string tableSize){
-    this->tableSizes.insert(this->tableSizes.end(), tableSizes);
+    this->tableSizes.insert(this->tableSizes.end(), tableSize);
 }
 
 void SqliteDBAnalysis::addTableLastIdGenerated (std::string tableLastIdGenerated){

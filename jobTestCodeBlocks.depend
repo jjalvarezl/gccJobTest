@@ -4751,13 +4751,14 @@
 1521669007 source:/home/jjalvarezl/Proyectos/jobTestCodeBlocks/src/SqliteManagement.cpp
 	"SqliteManagement.h"
 
-1521675732 /home/jjalvarezl/Proyectos/jobTestCodeBlocks/include/SqliteManagement.h
+1521677373 /home/jjalvarezl/Proyectos/jobTestCodeBlocks/include/SqliteManagement.h
 	"FileMetadata.h"
+	"SqliteDBAnalysis.h"
 	"sqlite3.h"
 
-1521667010 source:/home/jjalvarezl/Proyectos/jobTestCodeBlocks/src/SqliteDBAnalysis.cpp
+1521677710 source:/home/jjalvarezl/Proyectos/jobTestCodeBlocks/src/SqliteDBAnalysis.cpp
 	"SqliteDBAnalysis.h"
 
-1521668981 /home/jjalvarezl/Proyectos/jobTestCodeBlocks/include/SqliteDBAnalysis.h
+1521676277 /home/jjalvarezl/Proyectos/jobTestCodeBlocks/include/SqliteDBAnalysis.h
 	<boost/container/vector.hpp>
 
