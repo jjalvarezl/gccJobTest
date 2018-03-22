@@ -112,5 +112,6 @@ sqlite3/.libs/libsqlite3.a
 ## Restricciones:
 
 * Los logs deben tener la extension .log o la extension .log.x donde x puede ser cualquier cadena *sin puntos*.
+* Al no poderse impŕimir en wxWidgets, por cada archivo de log se imprime el numero de coincidencias en un archivo con el mismo nombre del archivo log en la carpeta ./logAnalisys.
 * Dado a que hay dos archivos .dat para diferentes propositos dentro de la prueba, se ha dejado con nombre a Agent9.3.2.dat como nombre fijo de archivo para para procesamiento con sqlite y a smbios.dat como nombre fijo de archivo para SMBios.
 * Debido a que la compilación de las librerías es estática es necesario que se ubique el proyecto en "/home/jjalvarezl/Proyectos/jobTestCodeBlocks/"

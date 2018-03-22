@@ -2,6 +2,8 @@
 #define LOGMETADATA_H
 #include <boost/container/vector.hpp>
 #include <stdlib.h>
+#include <sstream>
+#include <fstream>
 #include "FileMetadata.h"
 #include "LogLineMetadata.h"
 
@@ -36,15 +38,16 @@ class LogMetadata : FileMetadata
         void setLongestLogLine (LogLineMetadata* longestLogLine);
         LogLineMetadata* getLongestLogLine ();
 
-        void setMoreFrecuentError (LogLineMetadata moreFrecuentError);
-        LogLineMetadata getMoreFrecuentError ();
+        void setMoreFrecuentError (LogLineMetadata* moreFrecuentError);
+        LogLineMetadata* getMoreFrecuentError ();
 
         void setMoreThan10M (bool moreThan10M);
         bool isMoreThan10M ();
 
-        boost::container::vector<LogLineMetadata> getLogLineCounter();
+        boost::container::vector<LogLineMetadata*> getLogLineCounter();
 
-        void printLogLineCounter ();
+        std::string printLogLineCounter ();
+        std::string writeLogLineCounter (std::string fileName);
 
     protected:
 
@@ -55,10 +58,10 @@ class LogMetadata : FileMetadata
         int numberErrorLogs;
         bool moreThan10M;
         LogLineMetadata* longestLogLine;
-        LogLineMetadata moreFrecuentError;
+        LogLineMetadata* moreFrecuentError;
         long flagForLongestLogLine;
         int flagForMoreFrecuentError;
-        boost::container::vector<LogLineMetadata> logLineCounter;
+        boost::container::vector<LogLineMetadata*> logLineCounter;
 };
 
 #endif // LOGMETADATA_H

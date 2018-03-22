@@ -215,42 +215,47 @@ std::string ZlibManagement::printZipFiles(){
 std::string ZlibManagement::printLogFiles(){
     std::stringstream output;
 
-    /*
-
-    • Cantidad de errores (lineas que reportan error) por archivo de log.
-    • Linea de mayor longitud por cada archivo de log.
-    • Cada archivo que supera 10MB de tamaño.
-    • Error más frecuente.
-    • Lineas de log unicas y su cantidad de apariciones en el archivo.
-    • Cantidad de lineas con tipos de error INFO, DEBUG y ERROR.
-
-    cout <<"LOG: "<< "FILE NAME: "<<logMetadata.getLogFilePath()->c_str();
-    std::cout <<"FILE SIZE: "<<logMetadata.getLogFileSize();
-    std::cout <<"FILE EXT: "<<extension.c_str();
-    std::cout <<"MORE THAN 10M: ";
-    std::cout <<logMetadata.isMoreThan10M();
-    std::cout <<"MORE FRECUENT ERROR: ";
-    std::cout <<logMetadata.getMoreFrecuentError().getLogLine()->c_str()<<" ERROR MATCHS: "<<logMetadata.getMoreFrecuentError().getMatchsNumber();
-    std::cout <<"LONGEST LOG LINE: ";
-    std::cout <<""<<logMetadata.getLongestLogLine().getLogLine()->c_str()<<" SIZE: "<<logMetadata.getLongestLogLine().getLineSize();
-    std::cout <<"END OF LOG ANALYSIS"
-    */
-
-    output << "Printing log files metadata:";
+    output << "Printing log files metadata:"<<this->logFiles.size();
 
     for (unsigned i = 0; i < this->logFiles.size(); ++i){
-        output << "\n\nLOG FILE: "<<this->logFiles[i]->getLogFilePath()->c_str();
-        output << "\n\tLOG SIZE: "<<this->logFiles[i]->getLogFileSize()<<" bytes";
-        output << "\n\tIS MORE THAN 10M: "<<(this->logFiles[i]->isMoreThan10M()? "TRUE" : "FALSE");
-        output << "\n\tMORE FRECUENT ERROR: "<<this->logFiles[i]->getMoreFrecuentError().getLogLine()->c_str();
-        output << "\n\t\tTIMES THAT THIS ERROR MATCHS: "<<this->logFiles[i]->getMoreFrecuentError().getMatchsNumber();
-        output << "\n\tLONGEST LINE: "<<this->logFiles[i]->getLongestLogLine()->getLogLine()->substr(0,100)<<"(CAN NOT PRINT ALL LONG..)";
-        output << "\n\t\tTHIS LINE SIZE: "<<this->logFiles[i]->getLongestLogLine()->getLineSize();
+        boost::filesystem::path p(this->logFiles[i]->getLogFilePath()->c_str());
+
+        output << "\n\n --------------------------------------------------------"<<i
+            << "\nLOG FILE: "<<this->logFiles[i]->getLogFilePath()->c_str()
+            << "\n\tLOG SIZE: "<<this->logFiles[i]->getLogFileSize()<<" bytes"
+            << "\n\tNUMBER OF ERROR LINES: "<<this->logFiles[i]->getNumberErrorLogs()<<" times"
+            << "\n\tNUMBER OF INFO LINES: "<<this->logFiles[i]->getNumberInfoLogs()<<" times"
+            << "\n\tNUMBER OF DEBUG LINES: "<<this->logFiles[i]->getNumberDebugLogs()<<" times"
+            << "\n\tIS MORE THAN 10M: "<<(this->logFiles[i]->isMoreThan10M()? "TRUE" : "FALSE")
+            << "\n\tMORE FRECUENT ERROR: "<<this->logFiles[i]->getMoreFrecuentError()->getLogLine()->c_str()
+            << "\n\t\tTIMES THAT THIS ERROR MATCHS: "<<this->logFiles[i]->getMoreFrecuentError()->getMatchsNumber()
+            << "\n\tLONGEST LINE: "<<this->logFiles[i]->getLongestLogLine()->getLogLine()->substr(0,0)<<"(CAN NOT PRINT ALL LONG..)"
+            << "\n\t\tTHIS LINE SIZE: "<<this->logFiles[i]->getLongestLogLine()->getLineSize()
+            << "\n\tUNIQUE LOG LINES: writed on: "<<this->logFiles[i]->writeLogLineCounter(p.filename().c_str()).c_str();
+
+            //output <<" AQUI ES QUE SE SALE ";
+
     }
+
+    /*output << "\n\n --------------------------------------------------------"
+            << "\nLOG FILE: "<<this->logFiles[2]->getLogFilePath()->c_str()
+            << "\n\tLOG SIZE: "<<this->logFiles[2]->getLogFileSize()<<" bytes"
+            << "\n\tNUMBER OF ERROR LINES: "<<this->logFiles[2]->getNumberErrorLogs()<<" times"
+            << "\n\tNUMBER OF INFO LINES: "<<this->logFiles[2]->getNumberInfoLogs()<<" times"
+            << "\n\tNUMBER OF DEBUG LINES: "<<this->logFiles[2]->getNumberDebugLogs()<<" times"
+            << "\n\tIS MORE THAN 10M: "<<(this->logFiles[2]->isMoreThan10M()? "TRUE" : "FALSE")
+            << "\n\tMORE FRECUENT ERROR: "<<this->logFiles[2]->getMoreFrecuentError()->getLogLine()->c_str()
+            << "\n\t\tTIMES THAT THIS ERROR MATCHS: "<<this->logFiles[2]->getMoreFrecuentError()->getMatchsNumber()
+            << "\n\tLONGEST LINE: "<<this->logFiles[2]->getLongestLogLine()->getLogLine()->substr(0,100)<<"(CAN NOT PRINT ALL LONG..)"
+            << "\n\t\tTHIS LINE SIZE: "<<this->logFiles[2]->getLongestLogLine()->getLineSize()
+            << "\n\tUNIQUE LOG LINES: ";
+            for (unsigned j = 0; j < this->logFiles[2]->getLogLineCounter().size(); ++j){
+                output <<"\n\t\tLINEA DE LOG: "<<this->logFiles[2]->getLogLineCounter()[j]->getLogLine()->substr(0,0)<<"--- N MATCHS: "<<this->logFiles[2]->getLogLineCounter()[j]->getMatchsNumber();
+            }*/
 
     output<<"\n\nEND PRINTING LOG FILES METADATA\n\n";
 
-    std::cout << output.str();
+    //std::cout << output.str();
 
     return output.str();
 }

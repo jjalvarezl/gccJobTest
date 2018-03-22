@@ -4687,7 +4687,7 @@
 
 1519129042 /usr/lib/x86_64-linux-gnu/wx/include/gtk2-unicode-3.1-unofficial/wx/setup.h
 
-1521728224 source:/home/jjalvarezl/Proyectos/jobTestCodeBlocks/src/ZlibManagement.cpp
+1521735102 source:/home/jjalvarezl/Proyectos/jobTestCodeBlocks/src/ZlibManagement.cpp
 	"ZlibManagement.h"
 
 1521728780 /home/jjalvarezl/Proyectos/jobTestCodeBlocks/include/ZlibManagement.h
@@ -4723,12 +4723,14 @@
 	<stdio.h>
 	<iostream>
 
-1521728406 source:/home/jjalvarezl/Proyectos/jobTestCodeBlocks/src/LogMetadata.cpp
+1521735506 source:/home/jjalvarezl/Proyectos/jobTestCodeBlocks/src/LogMetadata.cpp
 	"LogMetadata.h"
 
-1521728205 /home/jjalvarezl/Proyectos/jobTestCodeBlocks/include/LogMetadata.h
+1521734427 /home/jjalvarezl/Proyectos/jobTestCodeBlocks/include/LogMetadata.h
 	<boost/container/vector.hpp>
 	<stdlib.h>
+	<sstream>
+	<fstream>
 	"FileMetadata.h"
 	"LogLineMetadata.h"
 
