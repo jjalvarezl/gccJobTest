@@ -164,6 +164,11 @@ bool ZlibManagement::uncompressFile(){
                     SqliteManagement::getInstance()->printSqliteDBAnalysis();
                 }
 
+                if (strcmp(p.filename().c_str(), "smbios.dat") == 0){
+                    SMBIOSManager::getInstance()->setSMBIOSFilePath(new std::string (filename));
+                    SMBIOSManager::getInstance()->processSMBIOSFile(out);
+                }
+
                 this->normalFiles.insert(this->normalFiles.end(), fileMetadata);
             }
             fclose( out );

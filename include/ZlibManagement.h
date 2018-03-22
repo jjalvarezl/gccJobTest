@@ -10,6 +10,7 @@
 #include "FileMetadata.h"
 #include "LogMetadata.h"
 #include "SqliteManagement.h"
+#include "SMBIOSManager.h"
 
 class ZlibManagement
 {

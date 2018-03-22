@@ -1720,7 +1720,7 @@
 1521743730 source:/home/jjalvarezl/Proyectos/jobTestCodeBlocks/src/MainView.cpp
 	"MainView.h"
 
-1521747596 source:/home/jjalvarezl/Proyectos/jobTestCodeBlocks/Main.cpp
+1521749457 source:/home/jjalvarezl/Proyectos/jobTestCodeBlocks/Main.cpp
 	"Main.h"
 
 1521746508 /home/jjalvarezl/Proyectos/jobTestCodeBlocks/Main.h
@@ -4689,10 +4689,10 @@
 
 1519129042 /usr/lib/x86_64-linux-gnu/wx/include/gtk2-unicode-3.1-unofficial/wx/setup.h
 
-1521747578 source:/home/jjalvarezl/Proyectos/jobTestCodeBlocks/src/ZlibManagement.cpp
+1521758357 source:/home/jjalvarezl/Proyectos/jobTestCodeBlocks/src/ZlibManagement.cpp
 	"ZlibManagement.h"
 
-1521728780 /home/jjalvarezl/Proyectos/jobTestCodeBlocks/include/ZlibManagement.h
+1521754401 /home/jjalvarezl/Proyectos/jobTestCodeBlocks/include/ZlibManagement.h
 	<string.h>
 	<iostream>
 	<stdio.h>
@@ -4703,6 +4703,7 @@
 	"FileMetadata.h"
 	"LogMetadata.h"
 	"SqliteManagement.h"
+	"SMBIOSManager.h"
 
 1519129042 /usr/include/wx-3.1-unofficial/wx/gbsizer.h
 	"wx/sizer.h"
@@ -4720,7 +4721,7 @@
 1521606013 source:/home/jjalvarezl/Proyectos/jobTestCodeBlocks/src/FileMetadata.cpp
 	"FileMetadata.h"
 
-1521606025 /home/jjalvarezl/Proyectos/jobTestCodeBlocks/include/FileMetadata.h
+1521752050 /home/jjalvarezl/Proyectos/jobTestCodeBlocks/include/FileMetadata.h
 	<string.h>
 	<stdio.h>
 	<iostream>
@@ -4847,6 +4848,23 @@
 1519129042 /usr/include/wx-3.1-unofficial/wx/xrc/xh_bmp.h
 	"wx/xrc/xmlres.h"
 
-1521747564 source:/home/jjalvarezl/Proyectos/jobTestCodeBlocks/src/InputPathDialog.cpp
+1521749373 source:/home/jjalvarezl/Proyectos/jobTestCodeBlocks/src/InputPathDialog.cpp
 	"InputPathDialog.h"
+
+1521759526 /home/jjalvarezl/Proyectos/jobTestCodeBlocks/include/SMBIOSManager.h
+	<math.h>
+	<string.h>
+	<stdio.h>
+	<stdlib.h>
+	<iostream>
+	<fstream>
+	<sstream>
+	<ctype.h>
+	<iomanip>
+	<stdio.h>
+	<vector>
+	"FileMetadata.h"
+
+1521758502 source:/home/jjalvarezl/Proyectos/jobTestCodeBlocks/src/SMBIOSManager.cpp
+	"SMBIOSManager.h"
 
