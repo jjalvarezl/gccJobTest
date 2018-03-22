@@ -7,6 +7,7 @@ MainView::MainView(const wxString& title) : wxFrame(NULL, wxID_ANY, title, wxDef
     frame_sizer = new wxBoxSizer( wxVERTICAL );
     this->SetSizer( frame_sizer );
 
+
     scrolledWindow = new wxScrolledWindow( this, wxID_ANY );
     scrolledWindow->SetScrollRate( 5, 5 );
     scrolledWindow->FitInside();
@@ -36,29 +37,32 @@ MainView::MainView(const wxString& title) : wxFrame(NULL, wxID_ANY, title, wxDef
     wxPanel* panelZipData = new wxPanel( notebookMain, wxID_ANY );
     notebookMain->AddPage( panelZipData, wxT("Datos Zip") );
 
-    //Adding page to notebook
-    wxPanel* panelTab1 = new wxPanel( notebookMain, wxID_ANY );
-    notebookMain->AddPage( panelTab1, wxT("Tab1") );
+    //Adding notebook to scrolled sizer.
+    scrolledWindow_sizer->Add( notebookMain, 1, wxEXPAND );
 
-
-    scrolledWindow_sizer->Add( notebookMain, 0, wxEXPAND );
-    scrolledWindow_sizer->Add( new wxButton( scrolledWindow, wxID_ANY, _("Button1"), wxDefaultPosition, wxSize(200,200) ), 0, wxEXPAND );
-    scrolledWindow_sizer->Add( new wxButton( scrolledWindow, wxID_ANY, _("Button3") ), 1, wxEXPAND );
-    scrolledWindow_sizer->Add( new wxButton( scrolledWindow, wxID_ANY, _("Button4") ), 0, wxEXPAND );
-
-    panel_sizer = new wxBoxSizer( wxVERTICAL );
-    panel_sizer->Add( hideme = new wxButton(panelTab1, 512, wxT("HideMe")), 0, wxEXPAND );
-    hideme->Hide();
-    panel_sizer->Add( new wxButton(panelTab1, 513, wxT("ShowMe")), 0, wxEXPAND );
-    panelTab1->SetSizer (panel_sizer);
-
+    //Panel sizer para BIOS
+    panel_sizer = new wxBoxSizer( wxHORIZONTAL );
+    treeCtrlBIOS = new wxTreeCtrl(panelBIOS, wxID_ANY, wxDefaultPosition, wxSize(200,300));
+    //Adding nodes
+    wxTreeItemId rootId = treeCtrlBIOS->AddRoot("Root");
+    wxTreeItemId child2Id = treeCtrlBIOS->AppendItem(rootId, "Node 2");
+    treeCtrlBIOS->AppendItem(child2Id, "Child of node 2");
+    treeCtrlBIOS->AppendItem(rootId, "Node 3");
+    //Adding event
+    treeCtrlBIOS->Connect(wxEVT_COMMAND_TREE_ITEM_ACTIVATED, wxTreeEventHandler(MainView::nodeActivated), NULL, this);
+    //Adding node information text container
+    textCtrlBIOS = new wxTextCtrl (panelBIOS, wxID_ANY, wxT(""), wxDefaultPosition, wxSize(200,300), wxTE_MULTILINE);
+    textCtrlBIOS->SetEditable (false);
+    panel_sizer->Add(treeCtrlBIOS, 0, wxEXPAND);
+    panel_sizer->Add(textCtrlBIOS, 1, wxEXPAND);
+    panelBIOS->SetSizer (panel_sizer);
 
     //Panel sizer para logs
     panel_sizer = new wxBoxSizer( wxVERTICAL );
     textCtrlLogs = new wxTextCtrl (panelLogs, wxID_ANY, wxT(""), wxDefaultPosition, wxSize(200,300), wxTE_MULTILINE);
     textCtrlLogs->SetEditable(false);
     *textCtrlLogs << ZlibManagement::getInstance()->printLogFiles();
-    panel_sizer->Add( textCtrlLogs, 0, wxEXPAND );
+    panel_sizer->Add( textCtrlLogs, 1, wxEXPAND );
     panelLogs->SetSizer (panel_sizer);
 
     //Panel sizer para sqlite
@@ -66,7 +70,7 @@ MainView::MainView(const wxString& title) : wxFrame(NULL, wxID_ANY, title, wxDef
     textCtrlSqlite = new wxTextCtrl (panelSqlite, wxID_ANY, wxT(""),wxDefaultPosition, wxSize(200,300), wxTE_MULTILINE);
     textCtrlSqlite->SetEditable(false);
     *textCtrlSqlite << SqliteManagement::getInstance()->printSqliteDBAnalysis();
-    panel_sizer->Add( textCtrlSqlite, 0, wxEXPAND );
+    panel_sizer->Add( textCtrlSqlite, 1, wxEXPAND );
     panelSqlite->SetSizer (panel_sizer);
 
     //Panel sizer para la estructura de zip
@@ -74,13 +78,22 @@ MainView::MainView(const wxString& title) : wxFrame(NULL, wxID_ANY, title, wxDef
     textCtrlZipStructure = new wxTextCtrl (panelZipData, wxID_ANY, wxT(""), wxDefaultPosition, wxSize(200,300), wxTE_MULTILINE);
     textCtrlZipStructure->SetEditable(false);
     *textCtrlZipStructure << ZlibManagement::getInstance()->printZipFiles();
-    panel_sizer->Add( textCtrlZipStructure, 0, wxEXPAND );
+    panel_sizer->Add( textCtrlZipStructure, 1, wxEXPAND );
     panelZipData->SetSizer (panel_sizer);
 
     //ctor
 }
 
+void MainView::nodeActivated(wxTreeEvent& event) {
+    wxTreeItemId myClickerId = event.GetItem();
+    wxTreeItemData* treeData = treeCtrlBIOS->GetItemData(myClickerId);
+    wxTreeItemId myNodeId = treeData->GetId();
+
+    wxMessageBox( wxT("This is the message."), wxT("HOLA MUNDO"), wxICON_INFORMATION);
+}
+
 MainView::~MainView()
 {
+    treeCtrlBIOS->Disconnect(wxEVT_COMMAND_TREE_ITEM_ACTIVATED, wxTreeEventHandler(MainView::nodeActivated), NULL, this);
     //dtor
 }

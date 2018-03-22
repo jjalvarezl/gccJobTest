@@ -5,6 +5,7 @@
 #include "wx/notebook.h"
 #include "wx/gbsizer.h"
 #include "wx/cmdline.h"
+#include "wx/treectrl.h"
 #include "SqliteManagement.h"
 #include "ZlibManagement.h"
 
@@ -13,6 +14,9 @@ class MainView : public wxFrame
     public:
         MainView(const wxString& title);
         virtual ~MainView();
+
+        //Event for treeCtrl BIOS
+        void nodeActivated (wxTreeEvent& event);
 
     protected:
 
@@ -31,6 +35,10 @@ class MainView : public wxFrame
         wxTextCtrl *textCtrlLogs;
         wxTextCtrl *textCtrlSqlite;
         wxTextCtrl *textCtrlZipStructure;
+
+        //BIOS Components
+        wxTreeCtrl* treeCtrlBIOS;
+        wxTextCtrl* textCtrlBIOS;
 };
 
 #endif // MAINVIEW_H

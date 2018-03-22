@@ -11,11 +11,11 @@
 
 using namespace std;
 
-const wxCmdLineEntryDesc gCmdLineDesc[] =
+/*const wxCmdLineEntryDesc gCmdLineDesc[] =
 {
     { wxCMD_LINE_OPTION, "id", "WID", "Windows Process ID", wxCMD_LINE_VAL_NUMBER },
     { wxCMD_LINE_NONE }
-};
+};*/
 
 class Main : public wxApp
 {

@@ -1707,22 +1707,23 @@
 	<iterator>
 	<cstddef>
 
-1521708674 /home/jjalvarezl/Proyectos/jobTestCodeBlocks/include/MainView.h
+1521742222 /home/jjalvarezl/Proyectos/jobTestCodeBlocks/include/MainView.h
 	<iostream>
 	"wx/wx.h"
 	"wx/notebook.h"
 	"wx/gbsizer.h"
 	"wx/cmdline.h"
+	"wx/treectrl.h"
 	"SqliteManagement.h"
 	"ZlibManagement.h"
 
-1521727160 source:/home/jjalvarezl/Proyectos/jobTestCodeBlocks/src/MainView.cpp
+1521743055 source:/home/jjalvarezl/Proyectos/jobTestCodeBlocks/src/MainView.cpp
 	"MainView.h"
 
-1521581118 source:/home/jjalvarezl/Proyectos/jobTestCodeBlocks/Main.cpp
+1521743201 source:/home/jjalvarezl/Proyectos/jobTestCodeBlocks/Main.cpp
 	"Main.h"
 
-1521581007 /home/jjalvarezl/Proyectos/jobTestCodeBlocks/Main.h
+1521743155 /home/jjalvarezl/Proyectos/jobTestCodeBlocks/Main.h
 	<iostream>
 	"sqlite3/sqlite3.h"
 	"wxWidgets-3.0.4/include/wx/wx.h"
@@ -4687,7 +4688,7 @@
 
 1519129042 /usr/lib/x86_64-linux-gnu/wx/include/gtk2-unicode-3.1-unofficial/wx/setup.h
 
-1521735102 source:/home/jjalvarezl/Proyectos/jobTestCodeBlocks/src/ZlibManagement.cpp
+1521736118 source:/home/jjalvarezl/Proyectos/jobTestCodeBlocks/src/ZlibManagement.cpp
 	"ZlibManagement.h"
 
 1521728780 /home/jjalvarezl/Proyectos/jobTestCodeBlocks/include/ZlibManagement.h
@@ -4723,7 +4724,7 @@
 	<stdio.h>
 	<iostream>
 
-1521735506 source:/home/jjalvarezl/Proyectos/jobTestCodeBlocks/src/LogMetadata.cpp
+1521735681 source:/home/jjalvarezl/Proyectos/jobTestCodeBlocks/src/LogMetadata.cpp
 	"LogMetadata.h"
 
 1521734427 /home/jjalvarezl/Proyectos/jobTestCodeBlocks/include/LogMetadata.h
@@ -4767,4 +4768,26 @@
 1521692651 /home/jjalvarezl/Proyectos/jobTestCodeBlocks/include/SqliteDBAnalysis.h
 	<iostream>
 	<boost/container/vector.hpp>
+
+1519129042 /usr/include/wx-3.1-unofficial/wx/treectrl.h
+	"wx/defs.h"
+	"wx/control.h"
+	"wx/treebase.h"
+	"wx/textctrl.h"
+	"wx/systhemectrl.h"
+	"wx/generic/treectlg.h"
+	"wx/msw/treectrl.h"
+
+1519129042 /usr/include/wx-3.1-unofficial/wx/treebase.h
+	"wx/defs.h"
+	"wx/window.h"
+	"wx/event.h"
+	"wx/dynarray.h"
+	"wx/itemid.h"
+
+1519129042 /usr/include/wx-3.1-unofficial/wx/itemid.h
+
+1519129042 /usr/include/wx-3.1-unofficial/wx/generic/treectlg.h
+	"wx/scrolwin.h"
+	"wx/pen.h"
 

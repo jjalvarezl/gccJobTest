@@ -5,13 +5,7 @@ bool Main::OnInit()
     ZlibManagement::getInstance()->setCompressedFilePath(new string("/etc/Aranda/Aranda Agent 9/Aranda.zip"));
     ZlibManagement::getInstance()->uncompressFile();
 
-    wxCmdLineParser parser (gCmdLineDesc, argc, argv);
-    parser.Parse();
-    long value;
-   if(parser.Found(wxT("WID"), &value)){
-      wxMessageBox(wxString::Format("%d\n",value));
-   }
-    MainView *mainView = new MainView(wxT("Simple"));
+    MainView *mainView = new MainView(wxT("Job Test Solution"));
     mainView->Show(true);
     return true;
 }
