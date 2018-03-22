@@ -16,15 +16,16 @@
 				<Compiler>
 					<Add option="-std=c++11" />
 					<Add option="-g" />
-					<Add option="`wx-config --cxxflags`" />
+					<Add option="`./wxWidgets-3.0.4/wx-config --cxxflags`" />
 					<Add directory="include" />
 				</Compiler>
 				<Linker>
-					<Add option="`wx-config --libs`" />
+					<Add option="`./wxWidgets-3.0.4/wx-config --libs`" />
 					<Add library="zlib-1.2.11/libz.a" />
 					<Add library="zlib-1.2.11/contrib/minizip/ioapi.o" />
 					<Add library="zlib-1.2.11/contrib/minizip/unzip.o" />
 					<Add library="zlib-1.2.11/contrib/minizip/zip.o" />
+					<Add library="sqlite3/.libs/libsqlite3.a" />
 				</Linker>
 			</Target>
 			<Target title="Release">
@@ -36,16 +37,17 @@
 				<Compiler>
 					<Add option="-O2" />
 					<Add option="-std=c++11" />
-					<Add option="`wx-config --cxxflags`" />
+					<Add option="`./wxWidgets-3.0.4/wx-config --cxxflags`" />
 					<Add directory="include" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
-					<Add option="`wx-config --libs`" />
+					<Add option="`./wxWidgets-3.0.4/wx-config --libs`" />
 					<Add library="zlib-1.2.11/libz.a" />
 					<Add library="zlib-1.2.11/contrib/minizip/ioapi.o" />
 					<Add library="zlib-1.2.11/contrib/minizip/unzip.o" />
 					<Add library="zlib-1.2.11/contrib/minizip/zip.o" />
+					<Add library="sqlite3/.libs/libsqlite3.a" />
 				</Linker>
 			</Target>
 		</Build>
@@ -60,12 +62,14 @@
 		<Unit filename="include/LogLineMetadata.h" />
 		<Unit filename="include/LogMetadata.h" />
 		<Unit filename="include/MainView.h" />
+		<Unit filename="include/SqliteDBAnalysis.h" />
 		<Unit filename="include/SqliteManagement.h" />
 		<Unit filename="include/ZlibManagement.h" />
 		<Unit filename="src/FileMetadata.cpp" />
 		<Unit filename="src/LogLineMetadata.cpp" />
 		<Unit filename="src/LogMetadata.cpp" />
 		<Unit filename="src/MainView.cpp" />
+		<Unit filename="src/SqliteDBAnalysis.cpp" />
 		<Unit filename="src/SqliteManagement.cpp" />
 		<Unit filename="src/ZlibManagement.cpp" />
 		<Extensions>

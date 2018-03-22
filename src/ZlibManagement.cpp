@@ -134,7 +134,7 @@ bool ZlibManagement::uncompressFile(){
                 LogMetadata logMetadata;
                 logMetadata.setLogFilePath(stringFilename);
                 logMetadata.processLogFile(out);
-                std::cout <<"LOG: "<< "FILE NAME: "<<logMetadata.getLogFilePath()->c_str();
+                /*::cout <<"LOG: "<< "FILE NAME: "<<logMetadata.getLogFilePath()->c_str();
                 std::cout <<"FILE SIZE: "<<logMetadata.getLogFileSize();
                 std::cout <<"FILE EXT: "<<extension.c_str();
                 std::cout <<"MORE THAN 10M: ";
@@ -143,7 +143,7 @@ bool ZlibManagement::uncompressFile(){
                 std::cout <<logMetadata.getMoreFrecuentError().getLogLine()->c_str()<<" ERROR MATCHS: "<<logMetadata.getMoreFrecuentError().getMatchsNumber();
                 std::cout <<"LONGEST LOG LINE: ";
                 std::cout <<""<<logMetadata.getLongestLogLine().getLogLine()->c_str()<<" SIZE: "<<logMetadata.getLongestLogLine().getLineSize();
-                std::cout <<"END OF LOG ANALYSIS";
+                std::cout <<"END OF LOG ANALYSIS";*/
                 this->logFiles.insert(this->logFiles.end(), logMetadata);
                 //<<"VECTOR DE COINCIDENCIAS: "<<logMetadata->getLogLineCounter().front().getLogLine()->c_str();
                 /*logMetadata->printLogLineCounter();
@@ -161,6 +161,7 @@ bool ZlibManagement::uncompressFile(){
                     SqliteManagement::getInstance()->processDbFile(out);
                     SqliteManagement::getInstance()->setDbFilePath(new std::string (filename));
                     SqliteManagement::getInstance()->processSqliteDb();
+                    SqliteManagement::getInstance()->printSqliteDBAnalysis();
                 }
 
                 this->normalFiles.insert(this->normalFiles.end(), fileMetadata);

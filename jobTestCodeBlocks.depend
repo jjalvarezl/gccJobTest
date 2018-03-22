@@ -4685,7 +4685,7 @@
 
 1519129042 /usr/lib/x86_64-linux-gnu/wx/include/gtk2-unicode-3.1-unofficial/wx/setup.h
 
-1521665022 source:/home/jjalvarezl/Proyectos/jobTestCodeBlocks/src/ZlibManagement.cpp
+1521691908 source:/home/jjalvarezl/Proyectos/jobTestCodeBlocks/src/ZlibManagement.cpp
 	"ZlibManagement.h"
 
 1521657502 /home/jjalvarezl/Proyectos/jobTestCodeBlocks/include/ZlibManagement.h
@@ -4748,17 +4748,18 @@
 	<stdlib.h>
 	<sys/stat.h>
 
-1521669007 source:/home/jjalvarezl/Proyectos/jobTestCodeBlocks/src/SqliteManagement.cpp
+1521693405 source:/home/jjalvarezl/Proyectos/jobTestCodeBlocks/src/SqliteManagement.cpp
 	"SqliteManagement.h"
 
-1521677373 /home/jjalvarezl/Proyectos/jobTestCodeBlocks/include/SqliteManagement.h
+1521693092 /home/jjalvarezl/Proyectos/jobTestCodeBlocks/include/SqliteManagement.h
 	"FileMetadata.h"
 	"SqliteDBAnalysis.h"
 	"sqlite3.h"
 
-1521677710 source:/home/jjalvarezl/Proyectos/jobTestCodeBlocks/src/SqliteDBAnalysis.cpp
+1521693352 source:/home/jjalvarezl/Proyectos/jobTestCodeBlocks/src/SqliteDBAnalysis.cpp
 	"SqliteDBAnalysis.h"
 
-1521676277 /home/jjalvarezl/Proyectos/jobTestCodeBlocks/include/SqliteDBAnalysis.h
+1521692651 /home/jjalvarezl/Proyectos/jobTestCodeBlocks/include/SqliteDBAnalysis.h
+	<iostream>
 	<boost/container/vector.hpp>
 

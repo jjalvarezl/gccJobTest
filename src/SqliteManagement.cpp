@@ -4,6 +4,7 @@ SqliteManagement* SqliteManagement::instance = 0;
 
 SqliteManagement::SqliteManagement()
 {
+    this->sqliteDBAnalysis = new SqliteDBAnalysis ();
     //ctor
 }
 
@@ -33,20 +34,36 @@ void SqliteManagement::processSqliteDb (){
         std::cout<<"\nInitiating database queries";
 
         char *errorMessage = 0;
-        int integerResponse = 0;
 
-        //First query retrieving table names with indexes
-        std::string sql= "select t1.tbl_name, t2.rootpage from SQLITE_MASTER t1 LEFT JOIN (select type, tbl_name, rootpage from SQLITE_MASTER t1 WHERE type = 'index') t2 ON t1.tbl_name = t2.tbl_name";
+        //First query, retrieving table names with indexes
+        std::string sql= "select DISTINCT(t1.tbl_name), t2.rootpage from SQLITE_MASTER t1 LEFT JOIN (select type, tbl_name, rootpage from SQLITE_MASTER t1 WHERE type = 'index') t2 ON t1.tbl_name = t2.tbl_name";
 
         const char* data = "Callback function called";
 
         status = sqlite3_exec(sqliteDb, sql.c_str(), &SqliteManagement::callbackTableNamesWithLastIndex, (void*)data, &errorMessage);
         if( status != SQLITE_OK ) {
-            fprintf(stderr, "SQL error: %s\n", errorMessage);
+            fprintf(stderr, "SQL error on first query: %s\n", errorMessage);
             sqlite3_free(errorMessage);
         } else {
             fprintf(stdout, "First query done successfully\n");
         }
+
+        //Second queries, retrieving number of rows per table.
+
+        for (unsigned i = 0; i < this->getSqliteDBAnalysis()->getTablesName().size(); ++i){
+            sql= "select count(*) as rows from "+this->getSqliteDBAnalysis()->getTablesName()[i];
+
+            data = "Callback function called";
+
+            status = sqlite3_exec(sqliteDb, sql.c_str(), &SqliteManagement::callbackRowsPerTable, (void*)data, &errorMessage);
+            if( status != SQLITE_OK ) {
+                fprintf(stderr, "SQL error on second query: %s\n", errorMessage);
+                sqlite3_free(errorMessage);
+            } else {
+                fprintf(stdout, "Second query done successfully\n");
+            }
+        }
+
     }
     std::cout<<"\n\n";
     sqlite3_close(sqliteDb);
@@ -58,30 +75,39 @@ int SqliteManagement::callbackTableNamesWithLastIndex(void *data, int argc, char
 
     for(i = 0; i<argc; i++){
         if (strcmp(azColName[i], "tbl_name")==0){
-            SqliteManagement::getInstance()->getSqliteDBAnalysis().addTableName(std::string(argv[i] ? argv[i] : "NULL"));
+            SqliteManagement::getInstance()->getSqliteDBAnalysis()->addTableName(std::string(argv[i] ? argv[i] : "NULL"));
         }
-        if (strcmp(azColName[i], "tbl_name")==0){
-            SqliteManagement::getInstance()->getSqliteDBAnalysis().addTableLastIdGenerated(std::string(argv[i] ? argv[i] : "NULL"));
+        if (strcmp(azColName[i], "rootpage")==0){
+            SqliteManagement::getInstance()->getSqliteDBAnalysis()->addTableLastIdGenerated(std::string(argv[i] ? argv[i] : "NULL"));
         }
-        printf("%s = %s\n", azColName[i], argv[i] ? argv[i] : "NULL");
     }
 
     printf("\n");
     return 0;
 }
 
-int SqliteManagement::callbackLastIndexPerTable(void *data, int argc, char **argv, char **azColName){
-   int i;
-   fprintf(stderr, "%s: ", (const char*)data);
+int SqliteManagement::callbackRowsPerTable(void *data, int argc, char **argv, char **azColName){
+    int i;
+    fprintf(stderr, "%s: ", (const char*)data);
 
-   for(i = 0; i<argc; i++){
-      printf("%s = %s\n", azColName[i], argv[i] ? argv[i] : "NULL");
-   }
+    SqliteManagement::getInstance()->getSqliteDBAnalysis()->addTableRowsNumber(std::string(argv[0]));
 
-   printf("\n");
-   return 0;
+    printf("\n");
+    return 0;
 }
 
+void SqliteManagement::printSqliteDBAnalysis(){
+    std::cout << "Printing sqlite database information:\n\n"
+        << "Database file size: "<<this->getDbFileSize()<<" bytes.\n"
+        << "Printing tables and sizes information:\n";
+
+    for (unsigned i = 0; i < this->getSqliteDBAnalysis()->getTablesName().size(); ++i){
+        std::cout << "\nTABLE NAME: "<<this->getSqliteDBAnalysis()->getTablesName()[i]
+            << "\n\tLAST INDEX GENERATED: "<<this->getSqliteDBAnalysis()->getTablesLastIdsGenerated()[i]
+            << "\n\tROWS: "<<this->getSqliteDBAnalysis()->getTablesRowsNumber()[i];
+    }
+    std::cout<<"\n\nEND SQLITE DATABASE PRINTING\n\n";
+}
 
 void SqliteManagement::processDbFile (FILE *dbFile){
     this->processFile(dbFile);
@@ -111,6 +137,6 @@ sqlite3* SqliteManagement::getSqliteDb(){
     return this->sqliteDb;
 }
 
-SqliteDBAnalysis SqliteManagement::getSqliteDBAnalysis (){
+SqliteDBAnalysis* SqliteManagement::getSqliteDBAnalysis (){
     return this->sqliteDBAnalysis;
 }
