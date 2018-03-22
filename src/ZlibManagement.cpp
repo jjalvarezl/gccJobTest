@@ -22,7 +22,7 @@ void ZlibManagement::setCompressedFilePath(std::string* path){
     this->path = path;
 }
 
-boost::container::vector<LogMetadata> ZlibManagement::getLogFiles(){
+boost::container::vector<LogMetadata*> ZlibManagement::getLogFiles(){
     return this->logFiles;
 }
 
@@ -131,9 +131,9 @@ bool ZlibManagement::uncompressFile(){
             if (strcmp(p.stem().c_str(), "")  != 0 &&
                 (strcmp((extension = boost::filesystem::extension(filename)).c_str(),".log")==0 ||
                  strcmp((extension = boost::filesystem::extension(p.stem())).c_str(),".log")==0)){
-                LogMetadata logMetadata;
-                logMetadata.setLogFilePath(stringFilename);
-                logMetadata.processLogFile(out);
+                LogMetadata* logMetadata = new LogMetadata();
+                logMetadata->setLogFilePath(stringFilename);
+                logMetadata->processLogFile(out);
                 /*::cout <<"LOG: "<< "FILE NAME: "<<logMetadata.getLogFilePath()->c_str();
                 std::cout <<"FILE SIZE: "<<logMetadata.getLogFileSize();
                 std::cout <<"FILE EXT: "<<extension.c_str();
@@ -196,8 +196,8 @@ std::string ZlibManagement::printZipFiles(){
     output << "Printing zip files structure:";
 
     for (unsigned i = 0; i < this->logFiles.size(); ++i){
-        output << "\n\nFILE: "<<this->logFiles[i].getLogFilePath()->c_str();
-        output << "\n\tSIZE: "<<this->logFiles[i].getLogFileSize()<<" bytes";
+        output << "\n\nFILE: "<<this->logFiles[i]->getLogFilePath()->c_str();
+        output << "\n\tSIZE: "<<this->logFiles[i]->getLogFileSize()<<" bytes";
     }
 
     for (unsigned i = 0; i < this->normalFiles.size(); ++i){
@@ -206,6 +206,49 @@ std::string ZlibManagement::printZipFiles(){
     }
 
     output<<"\n\nEND ZIP FILES DATA PRINTING\n\n";
+
+    std::cout << output.str();
+
+    return output.str();
+}
+
+std::string ZlibManagement::printLogFiles(){
+    std::stringstream output;
+
+    /*
+
+    • Cantidad de errores (lineas que reportan error) por archivo de log.
+    • Linea de mayor longitud por cada archivo de log.
+    • Cada archivo que supera 10MB de tamaño.
+    • Error más frecuente.
+    • Lineas de log unicas y su cantidad de apariciones en el archivo.
+    • Cantidad de lineas con tipos de error INFO, DEBUG y ERROR.
+
+    cout <<"LOG: "<< "FILE NAME: "<<logMetadata.getLogFilePath()->c_str();
+    std::cout <<"FILE SIZE: "<<logMetadata.getLogFileSize();
+    std::cout <<"FILE EXT: "<<extension.c_str();
+    std::cout <<"MORE THAN 10M: ";
+    std::cout <<logMetadata.isMoreThan10M();
+    std::cout <<"MORE FRECUENT ERROR: ";
+    std::cout <<logMetadata.getMoreFrecuentError().getLogLine()->c_str()<<" ERROR MATCHS: "<<logMetadata.getMoreFrecuentError().getMatchsNumber();
+    std::cout <<"LONGEST LOG LINE: ";
+    std::cout <<""<<logMetadata.getLongestLogLine().getLogLine()->c_str()<<" SIZE: "<<logMetadata.getLongestLogLine().getLineSize();
+    std::cout <<"END OF LOG ANALYSIS"
+    */
+
+    output << "Printing log files metadata:";
+
+    for (unsigned i = 0; i < this->logFiles.size(); ++i){
+        output << "\n\nLOG FILE: "<<this->logFiles[i]->getLogFilePath()->c_str();
+        output << "\n\tLOG SIZE: "<<this->logFiles[i]->getLogFileSize()<<" bytes";
+        output << "\n\tIS MORE THAN 10M: "<<(this->logFiles[i]->isMoreThan10M()? "TRUE" : "FALSE");
+        output << "\n\tMORE FRECUENT ERROR: "<<this->logFiles[i]->getMoreFrecuentError().getLogLine()->c_str();
+        output << "\n\t\tTIMES THAT THIS ERROR MATCHS: "<<this->logFiles[i]->getMoreFrecuentError().getMatchsNumber();
+        output << "\n\tLONGEST LINE: "<<this->logFiles[i]->getLongestLogLine()->getLogLine()->substr(0,100)<<"(CAN NOT PRINT ALL LONG..)";
+        output << "\n\t\tTHIS LINE SIZE: "<<this->logFiles[i]->getLongestLogLine()->getLineSize();
+    }
+
+    output<<"\n\nEND PRINTING LOG FILES METADATA\n\n";
 
     std::cout << output.str();
 

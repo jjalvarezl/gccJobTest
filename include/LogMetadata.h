@@ -33,8 +33,8 @@ class LogMetadata : FileMetadata
         void setNumberErrorLogs (int numberErrorLogs);
         int getNumberErrorLogs ();
 
-        void setLongestLogLine (LogLineMetadata longestLogLine);
-        LogLineMetadata getLongestLogLine ();
+        void setLongestLogLine (LogLineMetadata* longestLogLine);
+        LogLineMetadata* getLongestLogLine ();
 
         void setMoreFrecuentError (LogLineMetadata moreFrecuentError);
         LogLineMetadata getMoreFrecuentError ();
@@ -54,7 +54,7 @@ class LogMetadata : FileMetadata
         int numberDebugLogs;
         int numberErrorLogs;
         bool moreThan10M;
-        LogLineMetadata longestLogLine;
+        LogLineMetadata* longestLogLine;
         LogLineMetadata moreFrecuentError;
         long flagForLongestLogLine;
         int flagForMoreFrecuentError;

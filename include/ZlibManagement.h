@@ -18,10 +18,11 @@ class ZlibManagement
         void setCompressedFilePath(std::string* path);
         bool uncompressFile();
 
-        boost::container::vector<LogMetadata> getLogFiles();
+        boost::container::vector<LogMetadata*> getLogFiles();
         boost::container::vector<FileMetadata> getNormalFiles();
 
         std::string printZipFiles();
+        std::string printLogFiles();
 
     protected:
 
@@ -30,7 +31,7 @@ class ZlibManagement
         static ZlibManagement* instance;
         ZlibManagement();
 
-        boost::container::vector<LogMetadata> logFiles;
+        boost::container::vector<LogMetadata*> logFiles;
         boost::container::vector<FileMetadata> normalFiles;
 };
 

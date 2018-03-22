@@ -7,6 +7,9 @@ LogMetadata::LogMetadata():FileMetadata()
     this->numberInfoLogs = 0;
     this->moreThan10M=false;
     this->flagForMoreFrecuentError = 0;
+    longestLogLine = new LogLineMetadata();
+    moreFrecuentError.setLogLine(new std::string(""));
+    moreFrecuentError.setMatchsNumber(0);
     //ctor
 }
 
@@ -60,10 +63,11 @@ void LogMetadata::processLogLine (std::string* logLine, long lineSize){
 
         //setting the longest log line
         if (lineSize > this->flagForLongestLogLine){
+            std::cout << "ENTRA EN EL FLAG DE LINEA MAS LARGA";
             this->flagForLongestLogLine = lineSize;
-            this->longestLogLine.setLineSize(lineSize);
-            this->longestLogLine.setLogLine(logLine);
-            this->longestLogLine.setLogType(logLineMetadata.getLogType());
+            this->longestLogLine->setLineSize(lineSize);
+            this->longestLogLine->setLogLine(logLine);
+            this->longestLogLine->setLogType(logLineMetadata.getLogType());
         }
 
         //setting the first log as most frecuent error in order to compare in the iterator
@@ -124,10 +128,10 @@ bool LogMetadata::isMoreThan10M(){
 }
 
 
-void LogMetadata::setLongestLogLine (LogLineMetadata longestLogLine){
+void LogMetadata::setLongestLogLine (LogLineMetadata* longestLogLine){
     this->longestLogLine = longestLogLine;
 }
-LogLineMetadata LogMetadata::getLongestLogLine (){
+LogLineMetadata* LogMetadata::getLongestLogLine (){
     return this->longestLogLine;
 }
 

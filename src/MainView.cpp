@@ -57,7 +57,7 @@ MainView::MainView(const wxString& title) : wxFrame(NULL, wxID_ANY, title, wxDef
     panel_sizer = new wxBoxSizer( wxVERTICAL );
     textCtrlLogs = new wxTextCtrl (panelLogs, wxID_ANY, wxT(""), wxDefaultPosition, wxSize(200,300), wxTE_MULTILINE);
     textCtrlLogs->SetEditable(false);
-    //*textCtrlLogs <<
+    *textCtrlLogs << ZlibManagement::getInstance()->printLogFiles();
     panel_sizer->Add( textCtrlLogs, 0, wxEXPAND );
     panelLogs->SetSizer (panel_sizer);
 
