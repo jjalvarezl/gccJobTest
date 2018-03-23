@@ -1707,7 +1707,7 @@
 	<iterator>
 	<cstddef>
 
-1521764377 /home/jjalvarezl/Proyectos/jobTestCodeBlocks/include/MainView.h
+1521776783 /home/jjalvarezl/Proyectos/jobTestCodeBlocks/include/MainView.h
 	<iostream>
 	"wx/wx.h"
 	"wx/notebook.h"
@@ -1717,17 +1717,14 @@
 	"SqliteManagement.h"
 	"ZlibManagement.h"
 
-1521769678 source:/home/jjalvarezl/Proyectos/jobTestCodeBlocks/src/MainView.cpp
+1521777248 source:/home/jjalvarezl/Proyectos/jobTestCodeBlocks/src/MainView.cpp
 	"MainView.h"
 
 1521749457 source:/home/jjalvarezl/Proyectos/jobTestCodeBlocks/Main.cpp
 	"Main.h"
 
-1521746508 /home/jjalvarezl/Proyectos/jobTestCodeBlocks/Main.h
+1521770203 /home/jjalvarezl/Proyectos/jobTestCodeBlocks/Main.h
 	<iostream>
-	"sqlite3/sqlite3.h"
-	"wxWidgets-3.0.4/include/wx/wx.h"
-	"boost_1_66_0/boost/iterator.hpp"
 	"MainView.h"
 	"ZlibManagement.h"
 	"InputPathDialog.h"
@@ -4848,7 +4845,7 @@
 1519129042 /usr/include/wx-3.1-unofficial/wx/xrc/xh_bmp.h
 	"wx/xrc/xmlres.h"
 
-1521749373 source:/home/jjalvarezl/Proyectos/jobTestCodeBlocks/src/InputPathDialog.cpp
+1521772293 source:/home/jjalvarezl/Proyectos/jobTestCodeBlocks/src/InputPathDialog.cpp
 	"InputPathDialog.h"
 
 1521764562 /home/jjalvarezl/Proyectos/jobTestCodeBlocks/include/SMBIOSManager.h
@@ -4867,4 +4864,71 @@
 
 1521765763 source:/home/jjalvarezl/Proyectos/jobTestCodeBlocks/src/SMBIOSManager.cpp
 	"SMBIOSManager.h"
+
+1521581122 /home/jjalvarezl/Proyectos/jobTestCodeBlocks/wxWidgets-3.0.4/include/wx/treectrl.h
+	"wx/defs.h"
+	"wx/control.h"
+	"wx/treebase.h"
+	"wx/textctrl.h"
+	"wx/generic/treectlg.h"
+	"wx/msw/treectrl.h"
+	"wx/generic/treectlg.h"
+	"wx/generic/treectlg.h"
+	"wx/generic/treectlg.h"
+	"wx/generic/treectlg.h"
+	"wx/generic/treectlg.h"
+
+1521581122 /home/jjalvarezl/Proyectos/jobTestCodeBlocks/wxWidgets-3.0.4/include/wx/treebase.h
+	"wx/defs.h"
+	"wx/window.h"
+	"wx/event.h"
+	"wx/dynarray.h"
+	"wx/itemid.h"
+
+1521581121 /home/jjalvarezl/Proyectos/jobTestCodeBlocks/wxWidgets-3.0.4/include/wx/itemid.h
+
+1521581121 /home/jjalvarezl/Proyectos/jobTestCodeBlocks/wxWidgets-3.0.4/include/wx/generic/treectlg.h
+	"wx/scrolwin.h"
+	"wx/pen.h"
+
+1521581121 /home/jjalvarezl/Proyectos/jobTestCodeBlocks/wxWidgets-3.0.4/include/wx/msw/treectrl.h
+	"wx/textctrl.h"
+	"wx/dynarray.h"
+	"wx/treebase.h"
+	"wx/hashmap.h"
+
+1521581122 /home/jjalvarezl/Proyectos/jobTestCodeBlocks/wxWidgets-3.0.4/include/wx/xrc/xmlres.h
+	"wx/defs.h"
+	"wx/string.h"
+	"wx/dynarray.h"
+	"wx/arrstr.h"
+	"wx/datetime.h"
+	"wx/list.h"
+	"wx/gdicmn.h"
+	"wx/filesys.h"
+	"wx/bitmap.h"
+	"wx/icon.h"
+	"wx/artprov.h"
+	"wx/colour.h"
+	"wx/vector.h"
+	"wx/xrc/xmlreshandler.h"
+
+1521581121 /home/jjalvarezl/Proyectos/jobTestCodeBlocks/wxWidgets-3.0.4/include/wx/filesys.h
+	"wx/defs.h"
+	"wx/stream.h"
+	"wx/datetime.h"
+	"wx/filename.h"
+	"wx/hashmap.h"
+
+1521581122 /home/jjalvarezl/Proyectos/jobTestCodeBlocks/wxWidgets-3.0.4/include/wx/xrc/xmlreshandler.h
+	"wx/defs.h"
+	"wx/string.h"
+	"wx/artprov.h"
+	"wx/colour.h"
+	"wx/filesys.h"
+	"wx/imaglist.h"
+	"wx/window.h"
+
+1521581122 /home/jjalvarezl/Proyectos/jobTestCodeBlocks/wxWidgets-3.0.4/include/wx/xrc/xh_bmp.h
+	"wx/xrc/xmlres.h"
 

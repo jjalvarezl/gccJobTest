@@ -48,8 +48,9 @@ MainView::MainView(const wxString& title) : wxFrame(NULL, wxID_ANY, title, wxDef
 
     //Adding nodes
 
-    treeItemIdEntryPointStructure = treeCtrlBIOS->AddRoot("Entry Point structure");
-            treeItemIdEntryPointStructure32bits = treeCtrlBIOS->AppendItem(treeItemIdEntryPointStructure, "32 bits");
+    treeItemIdRootNode = treeCtrlBIOS->AddRoot("SMBIOS Analysis");
+        treeItemIdEntryPointStructure = treeCtrlBIOS->AppendItem(treeItemIdRootNode,"SMBIOS Entry Point structure");
+            treeItemIdEntryPointStructure32bits = treeCtrlBIOS->AppendItem(treeItemIdEntryPointStructure, "Table 1 - SMBIOS 2.1 (32-bit) Entry Point Structure");
                 treeItemIdAnchorString32bits = treeCtrlBIOS->AppendItem(treeItemIdEntryPointStructure32bits, "Anchor String");
                 treeItemIdEntryPointStructureChecksum32bits = treeCtrlBIOS->AppendItem(treeItemIdEntryPointStructure32bits, "Entry Point Structure Checksum");
                 treeItemIdEntryPointLenght32bits = treeCtrlBIOS->AppendItem(treeItemIdEntryPointStructure32bits, "Entry Point Length");
@@ -64,7 +65,7 @@ MainView::MainView(const wxString& title) : wxFrame(NULL, wxID_ANY, title, wxDef
                 treeItemIdStructureTableAddress32bits = treeCtrlBIOS->AppendItem(treeItemIdEntryPointStructure32bits, "Structure Table Address");
                 treeItemIdNumberOfSMBIOSStructures32bits = treeCtrlBIOS->AppendItem(treeItemIdEntryPointStructure32bits, "Number of SMBIOS Structures");
                 treeItemIdSMBIOSBCDRevision32bits = treeCtrlBIOS->AppendItem(treeItemIdEntryPointStructure32bits, "SMBIOS BCD Revision");
-            treeItemIdEntryPointStructure64bits = treeCtrlBIOS->AppendItem(treeItemIdEntryPointStructure, "64 bits");
+            treeItemIdEntryPointStructure64bits = treeCtrlBIOS->AppendItem(treeItemIdEntryPointStructure, "Table 2 - SMBIOS 3.0 (64-bit) Entry Point Structure");
                 treeItemIdAnchorString64bits = treeCtrlBIOS->AppendItem(treeItemIdEntryPointStructure64bits, "Anchor String");
                 treeItemIdEntryPointStructureChecksum64bits = treeCtrlBIOS->AppendItem(treeItemIdEntryPointStructure64bits, "Entry Point Structure Checksum");
                 treeItemIdEntryPointLenght64bits = treeCtrlBIOS->AppendItem(treeItemIdEntryPointStructure64bits, "Entry Point Length");
@@ -76,6 +77,27 @@ MainView::MainView(const wxString& title) : wxFrame(NULL, wxID_ANY, title, wxDef
                 treeItemIdStructureTableMaximumSize64bits = treeCtrlBIOS->AppendItem(treeItemIdEntryPointStructure64bits, "Structure Table Maximum Size");
                 treeItemIdStructureTableAddress64bits = treeCtrlBIOS->AppendItem(treeItemIdEntryPointStructure64bits, "Structure Table Address");
 
+        treeItemStructureHeaderFormatDescription = treeCtrlBIOS->AppendItem(treeItemIdRootNode,"Table 3 - Structure header format description");
+            treeItemStructureHeaderFormatDescriptionType = treeCtrlBIOS->AppendItem(treeItemStructureHeaderFormatDescription, "Type");
+            treeItemStructureHeaderFormatDescriptionHeader = treeCtrlBIOS->AppendItem(treeItemStructureHeaderFormatDescription, "Length");
+            treeItemStructureHeaderFormatDescriptionHandle = treeCtrlBIOS->AppendItem(treeItemStructureHeaderFormatDescription, "Handle");
+
+        treeItemBIOSInformationType0Structure = treeCtrlBIOS->AppendItem(treeItemIdRootNode,"Table 6 - BIOS Information (Type 0) structure");
+            treeItemBIOSInformationType0StructureType = treeCtrlBIOS->AppendItem(treeItemBIOSInformationType0Structure, "Type");
+            treeItemBIOSInformationType0StructureLenght = treeCtrlBIOS->AppendItem(treeItemBIOSInformationType0Structure, "Length");
+            treeItemBIOSInformationType0StructureHandle = treeCtrlBIOS->AppendItem(treeItemBIOSInformationType0Structure, "Handle");
+            treeItemBIOSInformationType0StructureVendor = treeCtrlBIOS->AppendItem(treeItemBIOSInformationType0Structure, "Vendor");
+            treeItemBIOSInformationType0StructureBIOSVersion = treeCtrlBIOS->AppendItem(treeItemBIOSInformationType0Structure, "BIOS Version");
+            treeItemBIOSInformationType0StructureBIOSStartingAddressSegment = treeCtrlBIOS->AppendItem(treeItemBIOSInformationType0Structure, "BIOS Standard Address Segment");
+            treeItemBIOSInformationType0StructureBIOSReleaseDate = treeCtrlBIOS->AppendItem(treeItemBIOSInformationType0Structure, "BIOS Release Date");
+            treeItemBIOSInformationType0StructureBIOSROMSite = treeCtrlBIOS->AppendItem(treeItemBIOSInformationType0Structure, "BIOS ROM Site");
+            treeItemBIOSInformationType0StructureBIOSCharacteristics = treeCtrlBIOS->AppendItem(treeItemBIOSInformationType0Structure, "BIOS Characteristics");
+            treeItemBIOSInformationType0StructureBIOSCharacteristicsExtensionBytes = treeCtrlBIOS->AppendItem(treeItemBIOSInformationType0Structure, "BIOS Characteristics Extension Bytes");
+            treeItemBIOSInformationType0StructureSystemBIOSMajorRelease = treeCtrlBIOS->AppendItem(treeItemBIOSInformationType0Structure, "System BIOS Major Release");
+            treeItemBIOSInformationType0StructureSystemBIOSMinorRelease = treeCtrlBIOS->AppendItem(treeItemBIOSInformationType0Structure, "System BIOS Minor Release");
+            treeItemBIOSInformationType0StructureEmbeddedControllerFirmwareMajorRelease = treeCtrlBIOS->AppendItem(treeItemBIOSInformationType0Structure, "Embedded Controller Firmware Major Release");
+            treeItemBIOSInformationType0StructureEmbeddedControllerFirmwareMinorRelease = treeCtrlBIOS->AppendItem(treeItemBIOSInformationType0Structure, "Embedded Controller Firmware Minor Release");
+            treeItemBIOSInformationType0StructureExtendedBIOSROMSize = treeCtrlBIOS->AppendItem(treeItemBIOSInformationType0Structure, "Extended BIOS ROM Size");
 
 
 
@@ -118,7 +140,7 @@ MainView::MainView(const wxString& title) : wxFrame(NULL, wxID_ANY, title, wxDef
 void MainView::nodeActivated(wxTreeEvent& event) {
     wxTreeItemId myClickerId = event.GetItem();
 
-    if (myClickerId == treeItemIdEntryPointStructure)
+    if (myClickerId == treeItemIdEntryPointStructure || myClickerId == treeItemIdRootNode)
         wxMessageBox( wxT("Por favor abra un elemento contenido en ésta categoría"), wxT("Información"), wxICON_INFORMATION);
 
         if (myClickerId == treeItemIdEntryPointStructure32bits)
@@ -167,7 +189,7 @@ void MainView::nodeActivated(wxTreeEvent& event) {
                 textCtrlBIOS->SetValue(SMBIOSManager::getInstance()->getHexPairByOffset(30)->c_str());
 
         if(myClickerId == treeItemIdEntryPointStructure64bits)
-            textCtrlBIOS->SetValue(SMBIOSManager::getInstance()->getHexPairsByOffsetRegions(0,16)->c_str());
+            textCtrlBIOS->SetValue(SMBIOSManager::getInstance()->getHexPairsByOffsetRegions(0,19)->c_str());
 
             if(myClickerId == treeItemIdAnchorString64bits)
                 textCtrlBIOS->SetValue(SMBIOSManager::getInstance()->getHexPairsByOffsetRegions(0,4)->c_str());
@@ -197,9 +219,67 @@ void MainView::nodeActivated(wxTreeEvent& event) {
                 textCtrlBIOS->SetValue(SMBIOSManager::getInstance()->getHexPairByOffset(12)->c_str());
 
             if(myClickerId == treeItemIdStructureTableAddress64bits)
-                textCtrlBIOS->SetValue(SMBIOSManager::getInstance()->getHexPairsByOffsetRegions(13,16)->c_str());
+                textCtrlBIOS->SetValue(SMBIOSManager::getInstance()->getHexPairsByOffsetRegions(13,19)->c_str());
 
+        if(myClickerId == treeItemStructureHeaderFormatDescription)
+            textCtrlBIOS->SetValue(SMBIOSManager::getInstance()->getHexPairsByOffsetRegions(0,3)->c_str());
 
+            if(myClickerId == treeItemStructureHeaderFormatDescriptionType)
+                textCtrlBIOS->SetValue(SMBIOSManager::getInstance()->getHexPairByOffset(0)->c_str());
+
+            if(myClickerId == treeItemStructureHeaderFormatDescriptionHeader)
+                textCtrlBIOS->SetValue(SMBIOSManager::getInstance()->getHexPairByOffset(1)->c_str());
+
+            if(myClickerId == treeItemStructureHeaderFormatDescriptionHandle)
+                textCtrlBIOS->SetValue(SMBIOSManager::getInstance()->getHexPairsByOffsetRegions(2,3)->c_str());
+
+        if(myClickerId == treeItemBIOSInformationType0Structure)
+            textCtrlBIOS->SetValue(SMBIOSManager::getInstance()->getHexPairsByOffsetRegions(0,25)->c_str());
+
+            if(myClickerId == treeItemBIOSInformationType0StructureType)
+                textCtrlBIOS->SetValue(SMBIOSManager::getInstance()->getHexPairByOffset(0)->c_str());
+
+            if(myClickerId == treeItemBIOSInformationType0StructureLenght)
+                textCtrlBIOS->SetValue(SMBIOSManager::getInstance()->getHexPairByOffset(1)->c_str());
+
+            if(myClickerId == treeItemBIOSInformationType0StructureHandle)
+                textCtrlBIOS->SetValue(SMBIOSManager::getInstance()->getHexPairsByOffsetRegions(2,3)->c_str());
+
+            if(myClickerId == treeItemBIOSInformationType0StructureVendor)
+                textCtrlBIOS->SetValue(SMBIOSManager::getInstance()->getHexPairByOffset(4)->c_str());
+
+            if(myClickerId == treeItemBIOSInformationType0StructureBIOSVersion)
+                textCtrlBIOS->SetValue(SMBIOSManager::getInstance()->getHexPairByOffset(5)->c_str());
+
+            if(myClickerId == treeItemBIOSInformationType0StructureBIOSStartingAddressSegment)
+                textCtrlBIOS->SetValue(SMBIOSManager::getInstance()->getHexPairsByOffsetRegions(6,7)->c_str());
+
+            if(myClickerId == treeItemBIOSInformationType0StructureBIOSReleaseDate)
+                textCtrlBIOS->SetValue(SMBIOSManager::getInstance()->getHexPairByOffset(8)->c_str());
+
+            if(myClickerId == treeItemBIOSInformationType0StructureBIOSROMSite)
+                textCtrlBIOS->SetValue(SMBIOSManager::getInstance()->getHexPairByOffset(9)->c_str());
+
+            if(myClickerId == treeItemBIOSInformationType0StructureBIOSCharacteristics)
+                textCtrlBIOS->SetValue(SMBIOSManager::getInstance()->getHexPairsByOffsetRegions(10,17)->c_str());
+
+            if(myClickerId == treeItemBIOSInformationType0StructureBIOSCharacteristicsExtensionBytes)
+                textCtrlBIOS->SetValue(SMBIOSManager::getInstance()->getHexPairsByOffsetRegions(18,19)->c_str());
+
+            if(myClickerId == treeItemBIOSInformationType0StructureSystemBIOSMajorRelease)
+                textCtrlBIOS->SetValue(SMBIOSManager::getInstance()->getHexPairByOffset(20)->c_str());
+
+            if(myClickerId == treeItemBIOSInformationType0StructureSystemBIOSMinorRelease)
+                textCtrlBIOS->SetValue(SMBIOSManager::getInstance()->getHexPairByOffset(21)->c_str());
+
+            if(myClickerId == treeItemBIOSInformationType0StructureEmbeddedControllerFirmwareMajorRelease)
+                textCtrlBIOS->SetValue(SMBIOSManager::getInstance()->getHexPairByOffset(22)->c_str());
+
+            if(myClickerId == treeItemBIOSInformationType0StructureEmbeddedControllerFirmwareMinorRelease)
+                textCtrlBIOS->SetValue(SMBIOSManager::getInstance()->getHexPairByOffset(23)->c_str());
+
+            if(myClickerId == treeItemBIOSInformationType0StructureExtendedBIOSROMSize)
+                textCtrlBIOS->SetValue(SMBIOSManager::getInstance()->getHexPairsByOffsetRegions(24,25)->c_str());
 }
 
 MainView::~MainView()

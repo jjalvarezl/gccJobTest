@@ -3,9 +3,17 @@
 
 Algunos elementos se tuvieron que borrar debido a la gran cantidad de espacio que ocupan individualmente, pero hasta donde yo tenía el sistema no es necesario su uso principalmente con wxWidgets y boost.
 
+Este proyecto fue compilado en debian 9 usando gcc para compilar tanto c como c++ en el estandar c++11.
+
+```
+$ gcc --version
+gcc (Debian 6.3.0-18+deb9u1) 6.3.0 20170516
+Copyright (C) 2016 Free Software Foundation, Inc.
+```
+
 ## Desempaquetado de la app:
 
-So
+Debido a la falta de tiempo y por compilación estática, es necesario que se desempaquete el sistema en la ruta "/home/jjalvarezl/Proyectos/jobTestCodeBlocks"
 
 ## Si es necesario compilar sus dependencias:
 

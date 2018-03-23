@@ -57,18 +57,15 @@ InputPathDialog::~InputPathDialog()
 }
 
 void InputPathDialog::acceptButtonEvent(wxCommandEvent& event){
-    //wxMessageBox( wxT("Aceptar Presionado"), wxT("HOLA MUNDO"), wxICON_INFORMATION);
+    ZlibManagement::getInstance()->setCompressedFilePath(new std::string(textCtrlZipPath->GetValue()));
+    if (ZlibManagement::getInstance()->uncompressFile()) {
+        this->Show(false);
 
-
-    //staticTextInfo = new wxStaticText(this, wxID_ANY, _("Por favot espere."), wxDefaultPosition, wxDLG_UNIT(this, wxSize(-1,-1)), wxALIGN_CENTRE);
-
-    ZlibManagement::getInstance()->setCompressedFilePath(new std::string("/etc/Aranda/Aranda Agent 9/Aranda.zip"));
-    ZlibManagement::getInstance()->uncompressFile();
-
-    this->Show(false);
-
-    MainView *mainView = new MainView(wxT("Job Test Solution"));
-    mainView->Show(true);
+        MainView *mainView = new MainView(wxT("Job Test Solution"));
+        mainView->Show(true);
+    } else {
+        wxMessageBox( wxT("No es posible abrir el archivo, por favor verifique la ruta o que efectivamente es un .zip"), wxT("Error"), wxICON_ERROR);
+    }
 }
 
 void InputPathDialog::cancelButtonEvent(wxCommandEvent& event){
