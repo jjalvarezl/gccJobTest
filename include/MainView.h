@@ -39,6 +39,37 @@ class MainView : public wxFrame
         //BIOS Components
         wxTreeCtrl* treeCtrlBIOS;
         wxTextCtrl* textCtrlBIOS;
+
+
+        wxTreeItemId treeItemIdEntryPointStructure;
+            wxTreeItemId treeItemIdEntryPointStructure32bits;
+                wxTreeItemId treeItemIdAnchorString32bits;
+                wxTreeItemId treeItemIdEntryPointStructureChecksum32bits;
+                wxTreeItemId treeItemIdEntryPointLenght32bits;
+                wxTreeItemId treeItemIdSMBIOSMajorVersion32bits;
+                wxTreeItemId treeItemIdSMBIOSMinorVersion32bits;
+                wxTreeItemId treeItemIdMaximumStructureSize32bits;
+                wxTreeItemId treeItemIdEntryPointRevision32bits;
+                wxTreeItemId treeItemIdFormattedArea32bits;
+                wxTreeItemId treeItemIdIntermediateAnchorString32bits;
+                wxTreeItemId treeItemIdIntermediateChecksum32bits;
+                wxTreeItemId treeItemIdStructureTableLength32bits;
+                wxTreeItemId treeItemIdStructureTableAddress32bits;
+                wxTreeItemId treeItemIdNumberOfSMBIOSStructures32bits;
+                wxTreeItemId treeItemIdSMBIOSBCDRevision32bits;
+            wxTreeItemId treeItemIdEntryPointStructure64bits;
+                wxTreeItemId treeItemIdAnchorString64bits;
+                wxTreeItemId treeItemIdEntryPointStructureChecksum64bits;
+                wxTreeItemId treeItemIdEntryPointLenght64bits;
+                wxTreeItemId treeItemIdSMBIOSMajorVersion64bits;
+                wxTreeItemId treeItemIdSMBIOSMinorVersion64bits;
+                wxTreeItemId treeItemIdSMBIOSDocrev64bits;
+                wxTreeItemId treeItemIdEntryPointRevision64bits;
+                wxTreeItemId treeItemIdReserved64bits;
+                wxTreeItemId treeItemIdStructureTableMaximumSize64bits;
+                wxTreeItemId treeItemIdStructureTableAddress64bits;
+
+        //BIOS wxTreeCtrl items
 };
 
 #endif // MAINVIEW_H

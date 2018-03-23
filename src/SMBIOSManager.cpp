@@ -5,7 +5,6 @@ SMBIOSManager* SMBIOSManager::instance = 0;
 SMBIOSManager::SMBIOSManager()
 {
     this->hexBinary = new std::string ("");
-    //ctor
 }
 
 SMBIOSManager::~SMBIOSManager()
@@ -70,8 +69,24 @@ std::string* SMBIOSManager::getHexPairByOffset (int offset){
     } else {
         std::stringstream sstm;
         sstm << this->hexBinary->at(position) << this->hexBinary->at(position+1);
-        //std::string* returnValue = new std::string ();
-        //returnValue = this->hexBinary->at(position) + this->hexBinary->at(position+1);
         return new std::string(sstm.str());
     }
 }
+
+std::string* SMBIOSManager::getHexPairsByOffsetRegions (int minorOffset, int majorOffset){
+    if (minorOffset>majorOffset){
+        return new std::string ("-1");
+    } else {
+        std::stringstream sstm;
+        for (int i=minorOffset; i<=majorOffset; i++){
+            std::string* aux = this->getHexPairByOffset(i);
+            if (strcmp(aux->c_str(), "-1") == 0){
+                return new std::string ("-1");
+            }
+            sstm<<aux->c_str()<<" ";
+        }
+        return new std::string (sstm.str());
+    }
+}
+
+

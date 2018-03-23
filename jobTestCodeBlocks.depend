@@ -1707,7 +1707,7 @@
 	<iterator>
 	<cstddef>
 
-1521742222 /home/jjalvarezl/Proyectos/jobTestCodeBlocks/include/MainView.h
+1521764377 /home/jjalvarezl/Proyectos/jobTestCodeBlocks/include/MainView.h
 	<iostream>
 	"wx/wx.h"
 	"wx/notebook.h"
@@ -1717,7 +1717,7 @@
 	"SqliteManagement.h"
 	"ZlibManagement.h"
 
-1521743730 source:/home/jjalvarezl/Proyectos/jobTestCodeBlocks/src/MainView.cpp
+1521769678 source:/home/jjalvarezl/Proyectos/jobTestCodeBlocks/src/MainView.cpp
 	"MainView.h"
 
 1521749457 source:/home/jjalvarezl/Proyectos/jobTestCodeBlocks/Main.cpp
@@ -4851,7 +4851,7 @@
 1521749373 source:/home/jjalvarezl/Proyectos/jobTestCodeBlocks/src/InputPathDialog.cpp
 	"InputPathDialog.h"
 
-1521759526 /home/jjalvarezl/Proyectos/jobTestCodeBlocks/include/SMBIOSManager.h
+1521764562 /home/jjalvarezl/Proyectos/jobTestCodeBlocks/include/SMBIOSManager.h
 	<math.h>
 	<string.h>
 	<stdio.h>
@@ -4865,6 +4865,6 @@
 	<vector>
 	"FileMetadata.h"
 
-1521758502 source:/home/jjalvarezl/Proyectos/jobTestCodeBlocks/src/SMBIOSManager.cpp
+1521765763 source:/home/jjalvarezl/Proyectos/jobTestCodeBlocks/src/SMBIOSManager.cpp
 	"SMBIOSManager.h"
 

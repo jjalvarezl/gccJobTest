@@ -21,6 +21,7 @@ class SMBIOSManager: FileMetadata
         void processSMBIOSFile (FILE *SMBIOSFile);
 
         std::string* getHexPairByOffset (int offset);
+        std::string* getHexPairsByOffsetRegions (int minorOffset, int majorOffset);
 
         //Setters and getters
         void setSMBIOSFilePath (std::string* SMBIOSFilePath);
